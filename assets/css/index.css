@@ -1,0 +1,621 @@
+/*Imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
+
+/* Variables */
+
+:root {
+    --principal: #3d1a1a;
+    --secondary: #FFFFFF;
+    --font-primary: 'Inter', sans-serif;
+    --text-lg: 2em;
+    --text-md: 1.6em;
+    --text-sm: 1.4em;
+}
+
+/* Reset */
+
+*,
+*::before *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+
+html {
+    font-family: var(--font-primary);
+    font-size: 62.5%;
+    background-color: var(--principal);
+    color: var(--secondary);
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+
+/* Helpers */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* HEADER*/
+
+header {
+    background-color: var(--principal);
+
+
+}
+
+header .navbar {
+
+    min-height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: 1px solid white;
+    width: 100%;
+
+
+}
+
+.menu .menu__item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+
+}
+
+.sub-menu .sub-menu__item .sub-menu__link {
+    padding: 1rem;
+    font-size: 1em;
+    transition: all .3s ease-in-out;
+}
+
+.sub-menu .sub-menu__item .sub-menu__link:hover {
+    background-color: var(--secondary);
+    color: var(--principal);
+
+}
+
+header .logo {
+    flex-basis: 30%;
+    height: 150px;
+    border-radius: 50%;
+}
+
+header .menu {
+    font-size: 1em;
+    flex-basis: 40%;
+    justify-content: space-between;
+
+}
+
+header .menu__item {
+    border: 2px solid var(--principal);
+    transition: border-color .3s ease-in-out;
+    padding: 0.2rem;
+
+}
+
+.menu .menu__item .menu__link {
+    font-size: var(--text-md);
+    padding: 1rem;
+}
+
+header .menu__item:hover {
+    border-color: var(--secondary);
+}
+
+/*MAIN*/
+
+body {
+
+    min-height: 100vh;
+    gap: 3rem;
+
+
+}
+
+.inicio {
+    display: flex;
+    font-size: var(--text-sm);
+    gap: 3rem;
+    align-items: center;
+    padding: 0 2rem;
+
+}
+
+.inicio__article {
+    line-height: 2rem;
+    max-width: 1080px;
+
+}
+
+.inicio__imagenes {
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    min-width: 320px;
+    margin-top: 3rem;
+    padding: 2rem;
+    justify-content: center;
+
+}
+
+.inicio__titulo {
+    font-size: var(--text-lg);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.foto1 {
+    padding: 2rem;
+    margin-right: 5rem;
+
+
+}
+
+.foto2 {
+    padding: 2rem;
+
+}
+
+
+aside {
+
+    border: 2px solid black;
+    padding: 2rem;
+    margin-top: 3rem;
+    flex-basis: 50%;
+    line-height: 4em;
+    font-size: var(--text-sm);
+    color: black;
+    margin-right: 2rem;
+    background-color: var(--secondary);
+    box-shadow: rgb(90, 87, 87);
+}
+
+.tituloChampaqui {
+    font-size: 4em;
+    text-align: center;
+
+}
+
+.nosotros {
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imagenChampaqui {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    flex-basis: 30%;
+    gap: 2rem;
+
+}
+
+.historia {
+    font-size: var(--text-sm);
+    line-height: 4em;
+
+}
+
+.tituloGaleria {
+    font-size: var(--text-lg);
+    align-items: center;
+}
+
+.galeriaDeFotos {
+
+    display: grid;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "toro1 toro2 toro3 toro4 toro5"
+        "toro6 toro7 toro8 toro9 toro10";
+
+}
+
+
+.toro1 {
+    grid-area: toro1;
+}
+
+.toro2 {
+    grid-area: toro2;
+}
+
+.toro3 {
+    grid-area: toro3;
+}
+
+.toro4 {
+    grid-area: toro4;
+}
+
+.toro5 {
+    grid-area: toro5;
+}
+
+.toro6 {
+    grid-area: toro6;
+}
+
+.toro7 {
+    grid-area: toro7;
+}
+
+.toro8 {
+    grid-area: toro8;
+}
+
+.toro9 {
+    grid-area: toro9;
+}
+
+.toro10 {
+    grid-area: toro10;
+}
+
+
+.tituloGaleria {
+    font-size: 4em;
+    text-align: center;
+
+}
+
+.consulta {
+    font-size: var(--text-md);
+    font-weight: bold;
+    margin: 4rem;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+form {
+    font-size: var(--text-md);
+    line-height: 4rem;
+    text-align: center;
+}
+
+.button {
+
+    font-size: var(--text-sm);
+    margin-bottom: 3rem;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.servicios__parrafo {
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: var(--text-md);
+    margin-top: 5rem;
+}
+
+.servicios__titulo {
+    font-size: 4em;
+    text-align: center;
+}
+
+.servicios__titulo2 {
+
+    font-size: var(--text-md);
+    text-decoration: underline;
+
+}
+
+.mainServicios {
+    background-image: url("https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_960_720.jpg");
+    color: black;
+    line-height: 1 rem;
+}
+
+.servicios__mision {
+    font-size: var(--text-sm);
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    border-top: 1px solid var(--secondary);
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+
+    body {
+        margin: 0.5rem;
+
+    }
+
+    header .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    header {
+
+        padding: 1em;
+        justify-content: center;
+
+    }
+
+    h3 {
+        font-size: var(--text-sm);
+    }
+
+    .inicio {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0.5rem;
+        font-family: 1.2em;
+
+    }
+
+    .inicio__imagenes {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .tituloChampaqui {
+        font-size: 2em;
+    }
+
+
+    .foto1 {
+        order: -1;
+
+    }
+
+    .foto2 {
+        flex-wrap: wrap;
+
+    }
+
+
+    .menu {
+        font-size: .8em;
+    }
+
+    .nosotros {
+        justify-content: center;
+        font-size: 1em;
+
+    }
+
+    aside {
+        justify-content: center;
+
+    }
+
+    .imagenChampaqui {
+        order: -1;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: .8em;
+
+    }
+
+    .servicios__titulo {
+        font-size: 3em;
+    }
+
+    .servicios__parrafo {
+
+        border: 2px solid var(--secondary);
+        line-height: 3rem;
+        font-weight: bold;
+        font-size: 1.5em;
+        justify-content: center;
+    }
+
+    .mainServicios {
+
+        font-size: 1em;
+        line-height: 2em;
+        justify-content: center;
+
+
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .galeriaDeFotos {
+        display: grid;
+        grid-template-columns: repeat (2fr, 1fr);
+        grid-template-rows: repeat (5, 1fr);
+        grid-template-areas:
+            "toro1 toro2"
+            "toro3 toro4"
+            "toro5 toro6"
+            "toro7 toro8"
+            "toro9 toro10"
+        ;
+    }
+
+    .toro1 {
+        grid-area: toro1;
+    }
+
+    .toro2 {
+        grid-area: toro2;
+    }
+
+    .toro3 {
+        grid-area: toro3;
+    }
+
+    .toro4 {
+        grid-area: toro4;
+    }
+
+    .toro5 {
+        grid-area: toro5;
+    }
+
+    .toro6 {
+        grid-area: toro6;
+    }
+
+    .toro7 {
+        grid-area: toro7;
+    }
+
+    .toro8 {
+        grid-area: toro8;
+    }
+
+    .toro9 {
+        grid-area: toro9;
+    }
+
+    .toro10 {
+        grid-area: toro10;
+    }
+
+    header .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tituloGaleria {
+        font-size: var(--text-md);
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+
+    .galeriaDeFotos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (10, 1fr);
+        grid-template-areas:
+            "toro1"
+            "toro2"
+            "toro3"
+            "toro4"
+            "toro5"
+            "toro6"
+            "toro7"
+            "toro8"
+            "toro9"
+            "toro10"
+        ;
+    }
+
+    .toro1 {
+        grid-area: toro1;
+    }
+
+    .toro2 {
+        grid-area: toro2;
+    }
+
+    .toro3 {
+        grid-area: toro3;
+    }
+
+    .toro4 {
+        grid-area: toro4;
+    }
+
+    .toro5 {
+        grid-area: toro5;
+    }
+
+    .toro6 {
+        grid-area: toro6;
+    }
+
+    .toro7 {
+        grid-area: toro7;
+    }
+
+    .toro8 {
+        grid-area: toro8;
+    }
+
+    .toro9 {
+        grid-area: toro9;
+    }
+
+    .toro10 {
+        grid-area: toro10;
+    }
+
+}
+
+header {
+
+    padding: 1em;
+
+}
+
+header .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
