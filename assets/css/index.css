@@ -25,10 +25,10 @@
 /* Globals */
 
 html {
-    font-family: var(--font-primary);
+    
     font-size: 62.5%;
-    background-color: var(--principal);
     color: var(--secondary);
+    font-family: var(--font-primary);
 }
 
 ul {
@@ -81,23 +81,28 @@ header .navbar {
 
 .menu .menu__item:hover .sub-menu {
     display: block;
+    color: var(--principal);
 }
 
 .sub-menu {
     display: none;
     position: absolute;
-
+    
 }
 
+
 .sub-menu .sub-menu__item .sub-menu__link {
-    padding: 1rem;
-    font-size: 1em;
+    
+    padding: 0.5rem;
+    gap: 1rem;
+    font-size: 1.5em;
     transition: all .3s ease-in-out;
+    color: var(--secondary);
 }
 
 .sub-menu .sub-menu__item .sub-menu__link:hover {
-    background-color: var(--secondary);
-    color: var(--principal);
+    background-color: rgb(134, 57, 57);
+    color: var(--secondary);
 
 }
 
@@ -123,7 +128,8 @@ header .menu__item {
 
 .menu .menu__item .menu__link {
     font-size: var(--text-md);
-    padding: 1rem;
+    
+    
 }
 
 header .menu__item:hover {
@@ -133,9 +139,12 @@ header .menu__item:hover {
 /*MAIN*/
 
 body {
-
+    background-color: var(--principal);
     min-height: 100vh;
     gap: 3rem;
+    color: var(--secondary);
+    font-family: var(--font-primary);
+    background-image: linear-gradient(to bottom, #5A2025, black)
 
 
 }
@@ -181,16 +190,24 @@ body {
 
 }
 
-.foto2 {
+picture .foto2{
     padding: 2rem;
+    border-radius: 50%;
+    width:100%;
+    transition: transform 5s ease-in-out;
+       
 
+}
+
+picture .foto2:hover {
+    transform: scale(1.5);
 }
 
 
 aside {
 
     border: 2px solid black;
-    padding: 2rem;
+    padding: 4rem;
     margin-top: 3rem;
     flex-basis: 50%;
     line-height: 4em;
@@ -199,6 +216,13 @@ aside {
     margin-right: 2rem;
     background-color: var(--secondary);
     box-shadow: rgb(90, 87, 87);
+    transition: all .5s ease-in-out;
+}
+
+aside:hover {
+     transform: scale(1.1);
+     color:rgb(126, 37, 37);
+    
 }
 
 .tituloChampaqui {
@@ -219,7 +243,11 @@ aside {
     margin-top: 3rem;
     flex-basis: 30%;
     gap: 2rem;
-
+    transition: transform 3s ease-in-out;
+    
+}
+.imagenChampaqui:hover {
+    transform: translate3d(12px, 40%, 3em);
 }
 
 .historia {
@@ -296,7 +324,7 @@ aside {
 }
 
 .consulta {
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     font-weight: bold;
     margin: 4rem;
     text-align: center;
@@ -308,12 +336,16 @@ form {
     font-size: var(--text-md);
     line-height: 4rem;
     text-align: center;
+    padding: .8rem;
+    width: 400px;
 }
+
 
 .button {
 
     font-size: var(--text-sm);
     margin-bottom: 3rem;
+    width: 200px;
 }
 
 .servicios {
@@ -343,7 +375,7 @@ form {
 
 .mainServicios {
     background-image: url("https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_960_720.jpg");
-    color: black;
+    color: rgb(29, 28, 28);
     line-height: 1 rem;
 }
 
