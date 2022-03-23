@@ -63,7 +63,7 @@ a {
 
 header {
     background-color: var(--principal);
-
+    width: 100%;
 
 }
 
@@ -90,14 +90,15 @@ header .navbar {
     
 }
 
-
 .sub-menu .sub-menu__item .sub-menu__link {
+    
     
     padding: 0.5rem;
     gap: 1rem;
     font-size: 1.5em;
     transition: all .3s ease-in-out;
     color: var(--secondary);
+    
 }
 
 .sub-menu .sub-menu__item .sub-menu__link:hover {
@@ -105,6 +106,7 @@ header .navbar {
     color: var(--secondary);
 
 }
+
 
 header .logo {
     flex-basis: 30%;
@@ -116,7 +118,7 @@ header .menu {
     font-size: 1em;
     flex-basis: 40%;
     justify-content: space-between;
-
+    
 }
 
 header .menu__item {
@@ -181,6 +183,7 @@ body {
     font-size: var(--text-lg);
     text-align: center;
     text-decoration: underline;
+    margin-bottom: 4rem;
 }
 
 .foto1 {
@@ -214,8 +217,7 @@ aside {
     font-size: var(--text-sm);
     color: black;
     margin-right: 2rem;
-    background-color: var(--secondary);
-    box-shadow: rgb(90, 87, 87);
+    background-image: url(../img/rollos.jpg);
     transition: all .5s ease-in-out;
 }
 
@@ -243,6 +245,7 @@ aside:hover {
     margin-top: 3rem;
     flex-basis: 30%;
     gap: 2rem;
+    border: 3px solid var(--secondary);
     transition: transform 3s ease-in-out;
     
 }
@@ -374,9 +377,11 @@ form {
 }
 
 .mainServicios {
-    background-image: url("https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_960_720.jpg");
+    background-image: url(../img/trigo.jpg);
     color: rgb(29, 28, 28);
-    line-height: 1 rem;
+    line-height: 3rem;
+    padding-top: 3rem;
+    
 }
 
 .servicios__mision {
@@ -467,7 +472,7 @@ footer {
 
     aside {
         justify-content: center;
-
+        
     }
 
     .imagenChampaqui {
@@ -515,7 +520,7 @@ footer {
 
     .galeriaDeFotos {
         display: grid;
-        grid-template-columns: repeat (2fr, 1fr);
+        grid-template-columns: repeat (2);
         grid-template-rows: repeat (5, 1fr);
         grid-template-areas:
             "toro1 toro2"
@@ -569,7 +574,9 @@ footer {
     header .navbar {
         flex-wrap: wrap;
         justify-content: center;
-    }
+       
+          }
+    
 
     .tituloGaleria {
         font-size: var(--text-md);
