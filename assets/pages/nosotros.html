@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cabaña Braford El Guadal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dfa396bf07.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/index.css">
 </head>
 
@@ -46,7 +49,9 @@
                 <li class="menu__item">
                     <a href="galeria.html" class="menu__link">Galería</a>
                 </li>
-
+                <li class="menu__item">
+                    <a href="premios.html" class="menu__link">Premios</a>
+               </li>
                 <li class="menu__item">
                     <a href="contacto.html" class="menu__link">Contacto</a>
                 </li>
@@ -55,36 +60,29 @@
         </nav>
     </header>
 
+    <main class="main-nosotros">
 
-    <section class="nosotros flex-row">
-
-
-        <aside>
-            <h2 class="tituloChampaqui">CHAMPAQUI</h2><br>
-            <p>
-                Otra cabaña cordobesa que se destacó en la muestra internacional fue El Guadal, de Las Arrias, que logró
-                el campeón ternero, pero éste no salió a la venta. El ternero, apodo Champaquí, tiene 10 meses de edad,
-                412 kilos. “Compitió en una categoría que era de 24 terneros en la que Champaquí ganó su sub-categoría y
-                en la final fue elegido campeón . Es la primera salida de esta cabaña a exposiciones y fue un debut muy
-                bueno, ya que ganó en la exposición nacional de Braford. Ahora lo estamos preparando para la exposición
-                de Palermo”, explicó a La Voz del Campo Leonel Alisio, asesor de El Guadal.
-                Champaquí, toro hijo de Kachapé, ideal para vaquillonas, facilidad de parto, imprime exelentemente el
-                fenotipo Braford.
-            </p>
-        </aside>
-
-
-        <picture >
-            <img class="imagenChampaqui" src="../img/Champaqui (2).jpg" alt="Campeón Toro Braford Champaqui">
-        </picture>
-
-    </section>
-
-    <section class="historia">
-
-        <article>
-            <h2 class="titulo">Empresa Familiar</h2>
-            <p>
+    <section class="champaqui container section-nosotros">
+        <div class="row d-flex justify-content-center">
+            <article class="card col-md-6">
+                <img src="../img/Champaqui (2).jpg" class="card-img-top" alt="Toro Champaqui campeón">
+                <div class="card-body fs-4">
+                    <h4 class="card- text-muted text-center fs-1 fw-bold">CHAMPAQUI</h4>
+                    <p class="card-text text-muted">Otra cabaña cordobesa que se destacó en la muestra internacional fue El Guadal, de Las Arrias, que logró
+                      el campeón ternero, pero éste no salió a la venta. El ternero, apodo Champaquí, tiene 10 meses de edad,
+                      412 kilos. “Compitió en una categoría que era de 24 terneros en la que Champaquí ganó su sub-categoría y
+                      en la final fue elegido campeón . Es la primera salida de esta cabaña a exposiciones y fue un debut muy
+                      bueno, ya que ganó en la exposición nacional de Braford. Ahora lo estamos preparando para la exposición
+                      de Palermo”, explicó a La Voz del Campo Leonel Alisio, asesor de El Guadal.
+                      Champaquí, toro hijo de Kachapé, ideal para vaquillonas, facilidad de parto, imprime exelentemente el
+                      fenotipo Braford.</p>
+                    <a href="#" class="btn btn-primary">Mas información</a>
+                </div>
+            </article>
+    
+           <article class="col-md-6">
+            <h1 class="titulo fw-bold text-decoration-underline text-center">Empresa Familiar</h1>
+            <p class="fs-3 fst-italic">
                 EL GUADAL, nace en el 2006 como empresa familiar conserva el buen trato, el entendimiento del esfuerzo y
                 la comprensión para
                 cada uno de sus clientes; pero además cuenta con un perfil profesional que le permite ofrecer al
@@ -92,25 +90,33 @@
                 programa genético diseñado para tal fin. Con un ofrecimiento único de años de selección genética, con
                 sólido respaldo y la calidad y excelencia que caracteriza a EL GUADAL.
             </p>
-
+        </div>
         </article>
     </section>
-
-
+</main>
 
     <!--Inicio del footer-->
     <footer>
 
-        <h3>Contáctanos</h3>
+        <h3 class="fw-bold">Contáctanos</h3>
 
-        <picture class="redes">
+        <p class="pFooter">
+            &copy; Todos los Derechos Reservados &copy;
+        </p>
 
-            <img src="" alt="Logo Redes Sociales" class="Redes">
-            <img src="" alt="Logo Redes Sociales" class="Redes">
+        <picture class="redes fs-1">
+
+            <i class="fa-brands fa-facebook mx-3 "></i>
+            <i class="fa-brands fa-whatsapp mx-3"></i>
+            <i class="fa-brands fa-instagram mx-3"></i>
+           
+         
         </picture>
 
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
 
 </body>

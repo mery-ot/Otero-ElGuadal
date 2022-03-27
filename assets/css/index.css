@@ -25,7 +25,7 @@
 /* Globals */
 
 html {
-    
+
     font-size: 62.5%;
     color: var(--secondary);
     font-family: var(--font-primary);
@@ -34,12 +34,13 @@ html {
 ul {
     list-style-type: none;
 
+
 }
 
 a {
     text-decoration: none;
-    color: inherit;
     display: inline-block;
+    color: var(--secondary);
 }
 
 
@@ -62,7 +63,7 @@ a {
 /* HEADER*/
 
 header {
-    background-color: var(--principal);
+    /*background-color: var(--principal);*/
     width: 100%;
 
 }
@@ -73,7 +74,6 @@ header .navbar {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    border-bottom: 1px solid white;
     width: 100%;
 
 
@@ -87,18 +87,32 @@ header .navbar {
 .sub-menu {
     display: none;
     position: absolute;
-    
+
 }
 
 .sub-menu .sub-menu__item .sub-menu__link {
-    
-    
-    padding: 0.5rem;
-    gap: 1rem;
+
+
+    padding: .7rem;
+    margin-top: 1rem;
     font-size: 1.5em;
     transition: all .3s ease-in-out;
     color: var(--secondary);
-    
+
+
+}
+
+.navbar li:hover>ul {
+    display: block;
+}
+
+.navbar li ul li {
+    position: relative;
+}
+
+.navbar li ul li {
+    right: 30px;
+    top: 0px;
 }
 
 .sub-menu .sub-menu__item .sub-menu__link:hover {
@@ -109,29 +123,31 @@ header .navbar {
 
 
 header .logo {
-    flex-basis: 30%;
+    flex-basis: 20%;
     height: 150px;
     border-radius: 50%;
+
 }
 
 header .menu {
     font-size: 1em;
     flex-basis: 40%;
     justify-content: space-between;
-    
+    gap: 1.5rem;
+    color: var(--secondary);
 }
 
 header .menu__item {
     border: 2px solid var(--principal);
     transition: border-color .3s ease-in-out;
-    padding: 0.2rem;
+    padding: 0.8rem;
+
 
 }
 
 .menu .menu__item .menu__link {
     font-size: var(--text-md);
-    
-    
+
 }
 
 header .menu__item:hover {
@@ -146,9 +162,7 @@ body {
     gap: 3rem;
     color: var(--secondary);
     font-family: var(--font-primary);
-    background-image: linear-gradient(to bottom, #5A2025, black)
-
-
+    background-image: linear-gradient(to bottom, #5A2025, rgb(94, 87, 87))
 }
 
 .inicio {
@@ -157,6 +171,8 @@ body {
     gap: 3rem;
     align-items: center;
     padding: 0 2rem;
+    background-color: var(--secondary);
+    color: black;
 
 }
 
@@ -183,6 +199,7 @@ body {
     font-size: var(--text-lg);
     text-align: center;
     text-decoration: underline;
+    margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
@@ -193,12 +210,12 @@ body {
 
 }
 
-picture .foto2{
+picture .foto2 {
     padding: 2rem;
     border-radius: 50%;
-    width:100%;
+    width: 100%;
     transition: transform 5s ease-in-out;
-       
+
 
 }
 
@@ -206,6 +223,13 @@ picture .foto2:hover {
     transform: scale(1.5);
 }
 
+/*NOSOTROS*/
+
+
+.main-nosotros {
+    background-color: var(--secondary);
+    color: var(--principal)
+}
 
 aside {
 
@@ -222,9 +246,9 @@ aside {
 }
 
 aside:hover {
-     transform: scale(1.1);
-     color:rgb(126, 37, 37);
-    
+    transform: scale(1.1);
+    color: rgb(126, 37, 37);
+
 }
 
 .tituloChampaqui {
@@ -239,6 +263,10 @@ aside:hover {
     flex-wrap: wrap;
 }
 
+.champaqui {
+    margin-top: 4rem;
+}
+
 .imagenChampaqui {
     display: flex;
     align-items: center;
@@ -247,8 +275,9 @@ aside:hover {
     gap: 2rem;
     border: 3px solid var(--secondary);
     transition: transform 3s ease-in-out;
-    
+
 }
+
 .imagenChampaqui:hover {
     transform: translate3d(12px, 40%, 3em);
 }
@@ -259,10 +288,53 @@ aside:hover {
 
 }
 
+/*SERVICIOS*/
+
+.main-servicios {
+    background-color: var(--secondary);
+    color: var(--principal);
+    background-image: url(../img/trigo.jpg);
+    color: rgb(29, 28, 28);
+    line-height: 3rem;
+    padding-top: 3rem;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.servicios__parrafo {
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: var(--text-md);
+    margin-top: 5rem;
+}
+
+.servicios__titulo {
+    font-size: 4em;
+    text-align: center;
+}
+
+.servicios__titulo2 {
+
+    font-size: var(--text-md);
+    text-decoration: underline;
+
+}
+
+.servicios__mision {
+    font-size: var(--text-md);
+}
+
 .tituloGaleria {
     font-size: var(--text-lg);
     align-items: center;
 }
+
+
+/*GALERIA*/
 
 .galeriaDeFotos {
 
@@ -277,6 +349,7 @@ aside:hover {
         "toro6 toro7 toro8 toro9 toro10";
 
 }
+
 
 
 .toro1 {
@@ -326,14 +399,29 @@ aside:hover {
 
 }
 
+.body-galeria {
+
+    background-image: url(../img/blancoynegro.jpg);
+}
+
+/*CONTACTO*/
+
 .consulta {
-    font-size: var(--text-lg);
+    line-height: 12rem;
+}
+
+.body-contacto {
+    background-image: url(../img/rollos.jpg);
+    color: black;
     font-weight: bold;
-    margin: 4rem;
-    text-align: center;
-    text-decoration: underline;
+}
+
+.body-contacto background-image {
+
+    opacity: 0.2;
 
 }
+
 
 form {
     font-size: var(--text-md);
@@ -351,42 +439,19 @@ form {
     width: 200px;
 }
 
-.servicios {
-    display: flex;
-    flex-direction: column;
+/*PREMIOS*/
 
+.titulo-premios {
+
+    margin: 4rem;
 }
 
-.servicios__parrafo {
-    line-height: 3rem;
-    font-weight: bold;
-    font-size: var(--text-md);
-    margin-top: 5rem;
+.premios-tabla {
+    margin-bottom: 4rem;
 }
 
-.servicios__titulo {
-    font-size: 4em;
-    text-align: center;
-}
 
-.servicios__titulo2 {
-
-    font-size: var(--text-md);
-    text-decoration: underline;
-
-}
-
-.mainServicios {
-    background-image: url(../img/trigo.jpg);
-    color: rgb(29, 28, 28);
-    line-height: 3rem;
-    padding-top: 3rem;
-    
-}
-
-.servicios__mision {
-    font-size: var(--text-sm);
-}
+/*FOOTER*/
 
 footer {
     height: 10vh;
@@ -395,9 +460,15 @@ footer {
     justify-content: space-between;
     font-size: var(--text-sm);
     border-top: 1px solid var(--secondary);
-
-
+    background-color: black;
 }
+
+.footer-contacto {
+    color: var(--secondary);
+}
+
+
+/*MEDIA QUERIES*/
 
 @media screen and (max-width: 480px) {
 
@@ -472,7 +543,7 @@ footer {
 
     aside {
         justify-content: center;
-        
+
     }
 
     .imagenChampaqui {
@@ -505,7 +576,6 @@ footer {
         font-size: 1em;
         line-height: 2em;
         justify-content: center;
-
 
     }
 
@@ -574,9 +644,9 @@ footer {
     header .navbar {
         flex-wrap: wrap;
         justify-content: center;
-       
-          }
-    
+
+    }
+
 
     .tituloGaleria {
         font-size: var(--text-md);
@@ -656,5 +726,3 @@ header .navbar {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
