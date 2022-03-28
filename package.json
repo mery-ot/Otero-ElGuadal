@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mery-ot/Otero-ElGuadal.git"
+    "url": "git+https://github.com/mery-ot/otero-elguadal.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mery-ot/Otero-ElGuadal/issues"
+    "url": "https://github.com/mery-ot/otero-elguadal/issues"
   },
-  "homepage": "https://github.com/mery-ot/Otero-ElGuadal#readme",
+  "homepage": "https://github.com/mery-ot/otero-elguadal#readme",
   "devDependencies": {
     "node-sass": "^7.0.1"
   }

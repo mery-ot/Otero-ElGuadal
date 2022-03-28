@@ -1,0 +1,31 @@
+header {
+    width: 100%;
+
+    .navbar {
+        
+        min-height: 15vh;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        width: 100%;
+    }
+
+    .logo {
+        flex-basis: 20%;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .menu{
+        font-size: 1em;
+        flex-basis: 40%;
+        justify-content: space-between;
+        gap: 1.5rem;
+        color: var(--secondary);
+    }
+    .menu__item {
+
+        border: 2px solid var(--principal);
+        transition: border-color .3s ease-in-out;
+        padding: 0.8rem;
+    }
+}
