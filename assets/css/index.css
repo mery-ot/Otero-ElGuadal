@@ -206,15 +206,18 @@ body {
 .foto1 {
     padding: 2rem;
     margin-right: 5rem;
-
-
+    animation: zoomIn 1 ease-in-out 3s;
+    
 }
+
 
 picture .foto2 {
     padding: 2rem;
     border-radius: 50%;
+    border: 1px solid black;
     width: 100%;
-    transition: transform 5s ease-in-out;
+    animation: fancy_rotate 4s 2 alternate cubic-bezier(0.39, 0.575, 0.565, 1);
+    /*transition: transform 5s ease-in-out;*/
 
 
 }
@@ -243,6 +246,7 @@ aside {
     margin-right: 2rem;
     background-image: url(../img/rollos.jpg);
     transition: all .5s ease-in-out;
+    animation: flip 1 ease-in-out 5s;
 }
 
 aside:hover {
@@ -310,6 +314,10 @@ aside:hover {
     font-weight: bold;
     font-size: var(--text-md);
     margin-top: 5rem;
+}
+
+.p_servicios {
+    font-size: 1.5rem;
 }
 
 .servicios__titulo {
@@ -726,3 +734,17 @@ header .navbar {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+@keyframes fancy_rotate{
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+    
