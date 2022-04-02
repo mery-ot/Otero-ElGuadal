@@ -1,31 +1,22 @@
-header {
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
 
-    .navbar {
-        
-        min-height: 15vh;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-        width: 100%;
-    }
 
-    .logo {
-        flex-basis: 20%;
-        height: 150px;
-        border-radius: 50%;
-    }
-    .menu{
-        font-size: 1em;
-        flex-basis: 40%;
-        justify-content: space-between;
-        gap: 1.5rem;
-        color: var(--secondary);
-    }
-    .menu__item {
+@import './misc/variables';
 
-        border: 2px solid var(--principal);
-        transition: border-color .3s ease-in-out;
-        padding: 0.8rem;
-    }
-}
+@import './misc/normalize';
+@import './misc/mixins';
+@import './misc/animations';
+
+/* PARTIALS */
+
+@import './partials/header';
+@import './partials/footer';
+
+/* VIEWS */
+
+@import './views/home';
+@import './views/nosotros';
+@import './views/servicios';
+@import './views/galeria';
+@import './views/premios';
+@import './views/contacto';

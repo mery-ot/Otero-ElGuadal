@@ -1,0 +1,46 @@
+.body-contacto>header {
+    font-weight: none;
+}
+
+.consulta {
+    line-height: 12rem;
+}
+
+.body-contacto {
+    background-image: url(../img/rollos.jpg);
+    color: black;
+    font-family: $font-primary;
+
+}
+
+.form-contacto {
+    font-weight: bold;
+}
+
+form {
+    font-size: $text-md;
+    line-height: 4rem;
+    text-align: center;
+    padding: .8rem;
+    width: 400px;
+}
+
+
+.button {
+
+    font-size: $text-sm;
+    margin-bottom: 3rem;
+    width: 200px;
+}
+
+
+@media screen and (max-width: 480px) {
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: .8em;
+
+}
+}

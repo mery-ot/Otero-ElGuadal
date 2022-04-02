@@ -1,0 +1,63 @@
+.main-servicios {
+
+    background-image: url(../img/trigo.jpg);
+    line-height: 3rem;
+    padding-top: 3rem;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.servicios__parrafo {
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: $text-md;
+    margin-top: 5rem;
+}
+
+.p_servicios {
+    font-size: 1.5rem;
+}
+
+.servicios__titulo {
+    font-size: 4em;
+    text-align: center;
+}
+
+.servicios__titulo2 {
+
+    font-size: $text-md;
+    text-decoration: underline;
+
+}
+
+.servicios__mision {
+    font-size: $text-md;
+}
+
+@media screen and (max-width: 480px) {
+
+.servicios__titulo {
+    font-size: 3em;
+}
+
+.servicios__parrafo {
+
+    border: 2px solid $secondary;
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.mainServicios {
+
+    font-size: 1em;
+    line-height: 2em;
+    justify-content: center;
+
+}
+}

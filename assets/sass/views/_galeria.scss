@@ -1,0 +1,22 @@
+.tituloGaleria {
+    font-size: 4em;
+    text-align: center;
+    font-size: $text-lg;
+    align-items: center;
+
+}
+
+.body-galeria {
+
+    background-image: url(../img/trigo.jpg);
+    color: $secondary;
+}
+
+
+
+@media screen and (max-width: 780px) {
+
+.tituloGaleria {
+    font-size: $text-md;
+}
+}

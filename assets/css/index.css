@@ -1,11 +1,12 @@
-/*Imports*/
+/*Imports
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
 
-/* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
+
+ Variables 
 
 :root {
-    --principal: #3d1a1a;
+    --principal: #20123d;
     --secondary: #FFFFFF;
     --font-primary: 'Inter', sans-serif;
     --text-lg: 2em;
@@ -13,39 +14,43 @@
     --text-sm: 1.4em;
 }
 
-/* Reset */
-
+/* Reset 
 *,
-*::before *::after {
+*::before 
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Globals */
+/* Globals 
 
 html {
 
     font-size: 62.5%;
     color: var(--secondary);
     font-family: var(--font-primary);
+    
+}
+
+body {
+    background-color: var(--principal);
 }
 
 ul {
     list-style-type: none;
-
 
 }
 
 a {
     text-decoration: none;
     display: inline-block;
-    color: var(--secondary);
+    color:var(--secondary);
 }
 
 
 /* Helpers */
-
+/*
 .flex-row {
     display: flex;
 }
@@ -60,46 +65,52 @@ a {
     margin: 0 auto;
 }
 
-/* HEADER*/
+/* HEADER */
 
-header {
-    /*background-color: var(--principal);*/
-    width: 100%;
-
+/*header {
+    background-color: var(--principal);
+   
 }
 
-header .navbar {
+.navbar {
 
     min-height: 15vh;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
     width: 100%;
+    opacity: none;
+    
+}
 
+.navbar-nav {
+    justify-content: space-between;
+    margin: 0 4rem;
+    padding: 2rem;
 
 }
 
-.menu .menu__item:hover .sub-menu {
+.nav-item {
+    padding: 1rem;
+    color:var(--secondary);
+}
+
+.nav-link {
+    color: var(--secondary);
+}
+
+.navbar-toggler-icon {
+    color: white;
+
+}
+
+.navbar-dark .navbar-toggler {
+    border-color:white;
+}
+
+.navbar .nav__item:hover .nav__link {
     display: block;
     color: var(--principal);
-}
-
-.sub-menu {
-    display: none;
-    position: absolute;
-
-}
-
-.sub-menu .sub-menu__item .sub-menu__link {
-
-
-    padding: .7rem;
-    margin-top: 1rem;
-    font-size: 1.5em;
-    transition: all .3s ease-in-out;
-    color: var(--secondary);
-
-
 }
 
 .navbar li:hover>ul {
@@ -110,18 +121,6 @@ header .navbar {
     position: relative;
 }
 
-.navbar li ul li {
-    right: 30px;
-    top: 0px;
-}
-
-.sub-menu .sub-menu__item .sub-menu__link:hover {
-    background-color: rgb(134, 57, 57);
-    color: var(--secondary);
-
-}
-
-
 header .logo {
     flex-basis: 20%;
     height: 150px;
@@ -129,40 +128,34 @@ header .logo {
 
 }
 
-header .menu {
-    font-size: 1em;
-    flex-basis: 40%;
-    justify-content: space-between;
-    gap: 1.5rem;
-    color: var(--secondary);
-}
+a .nav-link:hover {
 
-header .menu__item {
-    border: 2px solid var(--principal);
-    transition: border-color .3s ease-in-out;
-    padding: 0.8rem;
-
+    background-color: rgb(218, 147, 147);
+    border-bottom: white;
+    border-style: 1px solid white;
 
 }
 
-.menu .menu__item .menu__link {
-    font-size: var(--text-md);
-
+.dropdown-menu {
+    background-color:white;
+    color:var(--secondary);
 }
 
-header .menu__item:hover {
-    border-color: var(--secondary);
-}
+.dropdown-item:hover {
 
-/*MAIN*/
+    background-color: rgb(218, 147, 147);
+    color: rgb(0, 0, 0);
+}*/
 
-body {
-    background-color: var(--principal);
+/*INICIO*/
+
+/*.body-inicio {
+
     min-height: 100vh;
     gap: 3rem;
     color: var(--secondary);
-    font-family: var(--font-primary);
-    background-image: linear-gradient(to bottom, #5A2025, rgb(94, 87, 87))
+    font-family:var(--font-primary);
+   
 }
 
 .inicio {
@@ -171,7 +164,7 @@ body {
     gap: 3rem;
     align-items: center;
     padding: 0 2rem;
-    background-color: var(--secondary);
+    background-color: rgba(254, 254, 254, 0.886);
     color: black;
 
 }
@@ -196,10 +189,12 @@ body {
 }
 
 .inicio__titulo {
+    width: 100%;
+    background-image: url(../img/fondo_dust_scratches.png );
     font-size: var(--text-lg);
     text-align: center;
     text-decoration: underline;
-    margin-top: 4rem;
+    padding: 5rem;
     margin-bottom: 4rem;
 }
 
@@ -207,9 +202,8 @@ body {
     padding: 2rem;
     margin-right: 5rem;
     animation: zoomIn 1 ease-in-out 3s;
-    
-}
 
+}
 
 picture .foto2 {
     padding: 2rem;
@@ -217,43 +211,39 @@ picture .foto2 {
     border: 1px solid black;
     width: 100%;
     animation: fancy_rotate 4s 2 alternate cubic-bezier(0.39, 0.575, 0.565, 1);
-    /*transition: transform 5s ease-in-out;*/
-
+    transition: transform 5s ease-in-out;
 
 }
 
-picture .foto2:hover {
+/*picture .foto2:hover {
     transform: scale(1.5);
 }
 
+hr {
+    color: black;
+
+}*/
+
 /*NOSOTROS*/
 
-
-.main-nosotros {
-    background-color: var(--secondary);
-    color: var(--principal)
+.section-nosotros {
+    background-image: url(../img/trigo\ 2.jpg);
 }
 
-aside {
+.main-nosotros {
 
-    border: 2px solid black;
-    padding: 4rem;
-    margin-top: 3rem;
-    flex-basis: 50%;
-    line-height: 4em;
+    color: white;
+}
+
+.article-nosotros {
+
     font-size: var(--text-sm);
     color: black;
     margin-right: 2rem;
-    background-image: url(../img/rollos.jpg);
     transition: all .5s ease-in-out;
     animation: flip 1 ease-in-out 5s;
 }
 
-aside:hover {
-    transform: scale(1.1);
-    color: rgb(126, 37, 37);
-
-}
 
 .tituloChampaqui {
     font-size: 4em;
@@ -277,7 +267,7 @@ aside:hover {
     margin-top: 3rem;
     flex-basis: 30%;
     gap: 2rem;
-    border: 3px solid var(--secondary);
+    border: 3px solid white;
     transition: transform 3s ease-in-out;
 
 }
@@ -287,7 +277,7 @@ aside:hover {
 }
 
 .historia {
-    font-size: var(--text-sm);
+    font-size:var(--text-sm);
     line-height: 4em;
 
 }
@@ -295,10 +285,8 @@ aside:hover {
 /*SERVICIOS*/
 
 .main-servicios {
-    background-color: var(--secondary);
-    color: var(--principal);
+
     background-image: url(../img/trigo.jpg);
-    color: rgb(29, 28, 28);
     line-height: 3rem;
     padding-top: 3rem;
 }
@@ -336,83 +324,30 @@ aside:hover {
     font-size: var(--text-md);
 }
 
-.tituloGaleria {
-    font-size: var(--text-lg);
-    align-items: center;
-}
-
-
 /*GALERIA*/
-
-.galeriaDeFotos {
-
-    display: grid;
-    gap: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    grid-template-columns: repeat (5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-        "toro1 toro2 toro3 toro4 toro5"
-        "toro6 toro7 toro8 toro9 toro10";
-
-}
-
-
-
-.toro1 {
-    grid-area: toro1;
-}
-
-.toro2 {
-    grid-area: toro2;
-}
-
-.toro3 {
-    grid-area: toro3;
-}
-
-.toro4 {
-    grid-area: toro4;
-}
-
-.toro5 {
-    grid-area: toro5;
-}
-
-.toro6 {
-    grid-area: toro6;
-}
-
-.toro7 {
-    grid-area: toro7;
-}
-
-.toro8 {
-    grid-area: toro8;
-}
-
-.toro9 {
-    grid-area: toro9;
-}
-
-.toro10 {
-    grid-area: toro10;
-}
 
 
 .tituloGaleria {
     font-size: 4em;
     text-align: center;
+    font-size:var(--text-lg);
+    align-items: center;
 
 }
 
 .body-galeria {
 
-    background-image: url(../img/blancoynegro.jpg);
+    background-image: url(../img/trigo.jpg);
+    color: var(--secondary);
 }
 
+
 /*CONTACTO*/
+
+
+.body-contacto>header {
+    font-weight: none;
+}
 
 .consulta {
     line-height: 12rem;
@@ -421,15 +356,13 @@ aside:hover {
 .body-contacto {
     background-image: url(../img/rollos.jpg);
     color: black;
+    font-family: var(--font-primary);
+
+}
+
+.form-contacto {
     font-weight: bold;
 }
-
-.body-contacto background-image {
-
-    opacity: 0.2;
-
-}
-
 
 form {
     font-size: var(--text-md);
@@ -449,8 +382,14 @@ form {
 
 /*PREMIOS*/
 
+.body-premios {
+    background-image: url(../img/fondo_45degreee_fabric.png);
+
+}
+
 .titulo-premios {
 
+    color: black;
     margin: 4rem;
 }
 
@@ -458,8 +397,12 @@ form {
     margin-bottom: 4rem;
 }
 
+.sección-premios {
+    color: black;
+}
 
-/*FOOTER*/
+
+/*FOOTER
 
 footer {
     height: 10vh;
@@ -467,12 +410,12 @@ footer {
     align-items: center;
     justify-content: space-between;
     font-size: var(--text-sm);
-    border-top: 1px solid var(--secondary);
+    border-top: 1px solid white;
     background-color: black;
 }
 
 .footer-contacto {
-    color: var(--secondary);
+    color:var(--secondary);
 }
 
 
@@ -481,11 +424,7 @@ footer {
 @media screen and (max-width: 480px) {
 
 
-    body {
-        margin: 0.5rem;
-
-    }
-
+    
     header .navbar {
         flex-wrap: wrap;
         justify-content: center;
@@ -498,7 +437,7 @@ footer {
         justify-content: center;
 
     }
-
+   
     h3 {
         font-size: var(--text-sm);
     }
@@ -592,62 +531,11 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-}
 
-@media screen and (max-width: 720px) {
 
-    .galeriaDeFotos {
-        display: grid;
-        grid-template-columns: repeat (2);
-        grid-template-rows: repeat (5, 1fr);
-        grid-template-areas:
-            "toro1 toro2"
-            "toro3 toro4"
-            "toro5 toro6"
-            "toro7 toro8"
-            "toro9 toro10"
-        ;
-    }
+@media screen and (max-width: 780px) {
 
-    .toro1 {
-        grid-area: toro1;
-    }
-
-    .toro2 {
-        grid-area: toro2;
-    }
-
-    .toro3 {
-        grid-area: toro3;
-    }
-
-    .toro4 {
-        grid-area: toro4;
-    }
-
-    .toro5 {
-        grid-area: toro5;
-    }
-
-    .toro6 {
-        grid-area: toro6;
-    }
-
-    .toro7 {
-        grid-area: toro7;
-    }
-
-    .toro8 {
-        grid-area: toro8;
-    }
-
-    .toro9 {
-        grid-area: toro9;
-    }
-
-    .toro10 {
-        grid-area: toro10;
-    }
+    
 
     header .navbar {
         flex-wrap: wrap;
@@ -655,75 +543,14 @@ footer {
 
     }
 
-
-    .tituloGaleria {
-        font-size: var(--text-md);
+    .article-inicio {
+        width:100%;
     }
-}
+
 
 @media screen and (max-width: 320px) {
 
-
-    .galeriaDeFotos {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat (10, 1fr);
-        grid-template-areas:
-            "toro1"
-            "toro2"
-            "toro3"
-            "toro4"
-            "toro5"
-            "toro6"
-            "toro7"
-            "toro8"
-            "toro9"
-            "toro10"
-        ;
-    }
-
-    .toro1 {
-        grid-area: toro1;
-    }
-
-    .toro2 {
-        grid-area: toro2;
-    }
-
-    .toro3 {
-        grid-area: toro3;
-    }
-
-    .toro4 {
-        grid-area: toro4;
-    }
-
-    .toro5 {
-        grid-area: toro5;
-    }
-
-    .toro6 {
-        grid-area: toro6;
-    }
-
-    .toro7 {
-        grid-area: toro7;
-    }
-
-    .toro8 {
-        grid-area: toro8;
-    }
-
-    .toro9 {
-        grid-area: toro9;
-    }
-
-    .toro10 {
-        grid-area: toro10;
-    }
-
-}
-
+ 
 header {
 
     padding: 1em;
@@ -735,7 +562,12 @@ header .navbar {
     justify-content: center;
 }
 
-@keyframes fancy_rotate{
+.article-inicio {
+    width:100%;
+}
+
+
+@keyframes fancy_rotate {
 
     from {
         transform: rotate(0deg);
@@ -746,5 +578,6 @@ header .navbar {
     }
 
 }
-
-    
+}
+}
+}
