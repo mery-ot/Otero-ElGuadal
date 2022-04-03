@@ -55,13 +55,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    width: 100%;
-    opacity: none; }
+    width: 100%; }
     header .navbar .nav-item:hover .nav-link {
       display: block;
       color: var(--principal); }
     header .navbar li:hover > ul {
-      display: block; }
+      display: block;
+      color: var(--secondary); }
     header .navbar li ul li {
       position: relative; }
   header .navbar-nav {
@@ -198,50 +198,50 @@ footer {
           width: 100%; } }
 
 .section-nosotros {
-  background-image: url(../../img/trigo.jpg); }
+  height: 100%;
+  background-image: url(../img/trigo.jpg); }
 
-.section-nosotros {
-  background-image: url(../img/trigo\2.jpg); }
-
-.main-nosotros {
-  background-image: url(../../img/trigo.jpg);
+.article-nosotros {
+  font-size: 1.4em;
+  color: black;
+  margin: 3rem;
+  transition: all .5s ease-in-out;
+  animation: slideInLeft 1 ease-in-out 5s;
   gap: 3rem; }
-  .main-nosotros .article-nosotros {
-    font-size: 1.4em;
-    color: black;
-    margin: 3rem;
-    transition: all .5s ease-in-out;
-    animation: slideInLeft 1 ease-in-out 5s;
-    gap: 3rem; }
-  .main-nosotros .tituloChampaqui {
-    font-size: 4em;
-    text-align: center; }
-  .main-nosotros .nosotros {
-    flex-direction: row;
-    flex-wrap: wrap; }
-  .main-nosotros .champaqui {
-    margin-top: 4rem; }
-    .main-nosotros .champaqui__title {
-      font-size: 5em; }
-    .main-nosotros .champaqui .imagenChampaqui {
-      display: flex;
-      align-items: center;
-      margin-top: 3rem;
-      flex-basis: 30%;
-      gap: 3rem;
-      border: 3px solid #FFFFFF;
-      transition: transform 3s ease-in-out; }
-  .main-nosotros .historia {
-    font-size: 1.4em;
-    line-height: 4em; }
-  @media screen and (max-width: 480px) {
-    .main-nosotros .nosotros {
-      justify-content: center;
-      font-size: 1em; }
-    .main-nosotros aside {
-      justify-content: center; }
-    .main-nosotros .imagenChampaqui {
-      order: -1; } }
+
+.tituloChampaqui {
+  font-size: 4em;
+  text-align: center; }
+
+.nosotros {
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.champaqui {
+  padding-top: 4rem; }
+  .champaqui__title {
+    font-size: 5em; }
+  .champaqui .imagenChampaqui {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    flex-basis: 30%;
+    gap: 3rem;
+    border: 3px solid #FFFFFF;
+    transition: transform 3s ease-in-out; }
+
+.historia {
+  font-size: 1.4em;
+  line-height: 4em; }
+
+@media screen and (max-width: 480px) {
+  .nosotros {
+    justify-content: center;
+    font-size: 1em; }
+  aside {
+    justify-content: center; }
+  .imagenChampaqui {
+    order: -1; } }
 
 .main-servicios {
   background-image: url(../img/trigo.jpg);
@@ -287,14 +287,15 @@ footer {
     justify-content: center; } }
 
 .tituloGaleria {
-  font-size: 4em;
+  font-size: 6em;
   text-align: center;
-  font-size: 2em;
-  align-items: center; }
+  align-items: center;
+  padding: 6rem;
+  text-decoration: underline; }
 
 .body-galeria {
   background-image: url(../img/trigo.jpg);
-  color: #FFFFFF; }
+  color: black; }
 
 @media screen and (max-width: 780px) {
   .tituloGaleria {
@@ -304,8 +305,11 @@ footer {
   background-image: url(../img/fondo_45degreee_fabric.png); }
 
 .titulo-premios {
-  color: black;
-  margin: 4rem; }
+  font-size: 6em;
+  text-align: center;
+  align-items: center;
+  padding: 6rem;
+  text-decoration: underline; }
 
 .premios-tabla {
   margin-bottom: 4rem; }

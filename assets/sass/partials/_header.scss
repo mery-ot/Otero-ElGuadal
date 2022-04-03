@@ -14,8 +14,7 @@ header {
         justify-content: space-between;
         padding: 0 2rem;
         width: 100%;
-        opacity: none;
-    
+           
         & .nav-item:hover .nav-link {
             display: block;
             color: var(--principal);
@@ -23,6 +22,7 @@ header {
     
         & li:hover>ul {
             display: block;
+            color:var(--secondary);
         }
     
         & li ul li {

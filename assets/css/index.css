@@ -1,4 +1,4 @@
-/*Imports
+Imports
 
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
@@ -14,7 +14,7 @@
     --text-sm: 1.4em;
 }
 
-/* Reset 
+/* Reset */
 *,
 *::before 
 *::after {
@@ -23,7 +23,7 @@
     box-sizing: border-box;
 }
 
-/* Globals 
+/* Globals */
 
 html {
 
@@ -50,7 +50,7 @@ a {
 
 
 /* Helpers */
-/*
+
 .flex-row {
     display: flex;
 }
@@ -67,7 +67,7 @@ a {
 
 /* HEADER */
 
-/*header {
+header {
     background-color: var(--principal);
    
 }
@@ -149,7 +149,7 @@ a .nav-link:hover {
 
 /*INICIO*/
 
-/*.body-inicio {
+.body-inicio {
 
     min-height: 100vh;
     gap: 3rem;
@@ -215,7 +215,7 @@ picture .foto2 {
 
 }
 
-/*picture .foto2:hover {
+picture .foto2:hover {
     transform: scale(1.5);
 }
 
@@ -402,7 +402,7 @@ form {
 }
 
 
-/*FOOTER
+/*FOOTER*/
 
 footer {
     height: 10vh;
@@ -467,17 +467,6 @@ footer {
     }
 
 
-    .foto1 {
-        order: -1;
-
-    }
-
-    .foto2 {
-        flex-wrap: wrap;
-
-    }
-
-
     .menu {
         font-size: .8em;
     }
@@ -491,10 +480,6 @@ footer {
     aside {
         justify-content: center;
 
-    }
-
-    .imagenChampaqui {
-        order: -1;
     }
 
     form {

@@ -1,16 +1,9 @@
-.section-nosotros {
-    background-image: url(../../img/trigo.jpg);
+.body-nosotros {
 
+    background-image: url(../img/trigo.jpg);
+    line-height: 3rem;
+    padding-top: 3rem;
 }
-
-.section-nosotros {
-    background-image: url(../img/trigo\2.jpg);
-}
-.main-nosotros {
-
-   background-image:url(../../img/trigo.jpg);
-   gap: 3rem;
-
 
 .article-nosotros {
 
@@ -35,12 +28,12 @@
 }
 
 .champaqui {
-    margin-top: 4rem;
+    padding-top: 4rem;
 
     &__title {
         font-size: 5em;
     }
-    
+
     .imagenChampaqui {
         display: flex;
         align-items: center;
@@ -49,8 +42,8 @@
         gap: 3rem;
         border: 3px solid $secondary;
         transition: transform 3s ease-in-out;
-        }
-   
+    }
+
 }
 
 
@@ -76,5 +69,4 @@
     .imagenChampaqui {
         order: -1;
     }
-}
 }
