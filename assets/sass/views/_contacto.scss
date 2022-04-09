@@ -1,36 +1,43 @@
-.body-contacto>header {
-    font-weight: none;
-}
 
-.consulta {
-    line-height: 12rem;
-}
-
-.body-contacto {
+.contacto__body {
     background-image: url(../img/rollos.jpg);
-    color: black;
+  
     font-family: $font-primary;
 
-}
+    .contacto__title {
+        font-size: x-large;
+        margin-bottom: 4rem;
+        color: black;
+    }
+    
+    .contacto__form {
+        font-family: $font-secondary;
+        font-size: medium;
+        font-weight: bold;
+        line-height: 4rem;
+        text-align: center;
+        padding: .8rem;
+        margin-top: 4rem;
+        background-color:rgba(222, 184, 135, 0.351);  
+        color: black;  
 
-.form-contacto {
-    font-weight: bold;
-}
+        .form-label {
+            font-size: map-get($sizes , xsmall);
+        }
 
-form {
-    font-size: $text-md;
-    line-height: 4rem;
-    text-align: center;
-    padding: .8rem;
-    width: 400px;
-}
+        .contacto__btn {
 
+            margin-bottom: 2rem;
+            width: 100px;
+            padding: .2rem;
+            background-color: $btn-link-color;
+            color:white;
+            border: none;
 
-.button {
-
-    font-size: $text-sm;
-    margin-bottom: 3rem;
-    width: 200px;
+        }
+        
+        
+    }
 }
 
 

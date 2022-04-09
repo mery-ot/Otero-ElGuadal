@@ -1,23 +1,18 @@
-.tituloGaleria {
 
-    font-size: 6em;
-    text-align: center;
-    align-items: center;
-    padding: 6rem;
-    text-decoration: underline;
+.galeria__body {
 
-}
-
-.body-galeria {
-
+    padding-bottom:5rem;
     background-image: url(../img/trigo.jpg);
     color: black;
+    
+    .galeria__titulo {
+        @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+    }
 }
-
 
 @media screen and (max-width: 780px) {
 
-.tituloGaleria {
-    font-size: $text-md;
+.galeria__titulo {
+    font-size:large;
 }
 }

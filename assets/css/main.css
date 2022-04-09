@@ -1,5 +1,25 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Josefin+Sans:wght@300;400;500;700&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap");
+.fs-xxlarge {
+  font-size: 5em; }
+
+.fs-xlarge {
+  font-size: 3em; }
+
+.fs-large {
+  font-size: 2em; }
+
+.fs-medium {
+  font-size: 1.6em; }
+
+.fs-small {
+  font-size: 1.4em; }
+
+.fs-xsmall {
+  font-size: 1em; }
+
+.fs-xxsmall {
+  font-size: 0.8em; }
+
 /* RESET */
 *,
 *::before,
@@ -22,9 +42,6 @@ a {
   display: inline-block;
   color: #FFFFFF; }
 
-body {
-  background-color: var(--principal); }
-
 /* Helpers */
 .flex-row {
   display: flex; }
@@ -45,7 +62,7 @@ body {
 
 /* PARTIALS */
 header {
-  background-color: var(--principal); }
+  background-color: #3d1a1a; }
   header .logo {
     flex-basis: 20%;
     height: 150px;
@@ -56,37 +73,33 @@ header {
     justify-content: space-between;
     padding: 0 2rem;
     width: 100%; }
-    header .navbar .nav-item:hover .nav-link {
-      display: block;
-      color: var(--principal); }
-    header .navbar li:hover > ul {
-      display: block;
-      color: var(--secondary); }
-    header .navbar li ul li {
-      position: relative; }
-  header .navbar-nav {
-    justify-content: space-between;
-    margin: 0 4rem;
-    padding: 2rem; }
-  header .nav-item {
-    padding: 1rem;
-    color: var(--secondary); }
-  header .nav-link {
-    color: var(--secondary); }
-  header .navbar-toggler-icon {
-    color: white; }
-  header .navbar-dark .navbar-toggler {
-    border-color: white; }
-  header a .nav-link:hover {
-    background-color: #da9393;
-    border-bottom: white;
-    border-style: 1px solid white; }
-  header .dropdown-menu {
-    background-color: white;
-    color: var(--secondary); }
-  header .dropdown-item:hover {
-    background-color: #da9393;
-    color: black; }
+    header .navbar .navbar-nav {
+      justify-content: space-between;
+      margin: 0 4rem;
+      padding: 2rem; }
+      header .navbar .navbar-nav .nav-item {
+        padding: 1rem;
+        color: #FFFFFF; }
+        header .navbar .navbar-nav .nav-item .nav-link {
+          border-bottom: 2px solid #3d1a1a; }
+          header .navbar .navbar-nav .nav-item .nav-link:hover {
+            border-bottom: 2px solid #FFFFFF;
+            border-color: #FFFFFF; }
+        header .navbar .navbar-nav .nav-item .dropdown-menu {
+          background-color: white;
+          color: #FFFFFF; }
+          header .navbar .navbar-nav .nav-item .dropdown-menu.dropdown-item:hover {
+            background-color: #da9393;
+            color: black; }
+      header .navbar .navbar-nav li:hover > ul {
+        display: block;
+        color: #FFFFFF; }
+      header .navbar .navbar-nav li ul li {
+        position: relative; }
+      header .navbar .navbar-nav .navbar-dark .navbar-toggler {
+        border-color: white; }
+        header .navbar .navbar-nav .navbar-dark .navbar-toggler .navbar-toggler-icon {
+          color: white; }
 
 footer {
   height: 10vh;
@@ -96,33 +109,30 @@ footer {
   font-size: var(--text-sm);
   border-top: 1px solid white;
   background-color: black; }
-  footer .footer-contacto {
-    color: var(--secondary); }
 
 /* VIEWS */
 .body-inicio {
   min-height: 100vh;
   gap: 3rem;
   color: #FFFFFF;
-  font-family: "Inter", sans-serif;
-  background-color: #3d1a1a; }
+  font-family: "Inter", sans-serif; }
   .body-inicio .inicio {
     display: flex;
-    font-size: 1.4em;
+    font-size: small;
     gap: 3rem;
     text-align: left;
     padding: 0 2rem;
-    background-color: #FFFFFF;
+    background-color: rgba(222, 184, 135, 0.351);
     color: black; }
-    .body-inicio .inicio main {
-      background-color: darkgrey; }
     .body-inicio .inicio__article {
       line-height: 4rem;
       max-width: 1080px; }
     .body-inicio .inicio__titulo {
+      color: white;
+      text-shadow: 2px 2px 2px black;
       width: 100%;
       font-family: 'Expletus Sans', cursive;
-      background-image: url(../img/fondo_45degreee_fabric.png);
+      background-image: url(../img/ganaderia3.jpg);
       font-size: 4em;
       text-align: center;
       padding: 8rem;
@@ -138,210 +148,187 @@ footer {
       padding: 2rem;
       justify-content: center; }
       .body-inicio .inicio__imagenes .foto1 {
-        padding: 2rem;
         margin-right: 5rem;
         animation: zoomIn 1 ease-in-out 3s; }
-        .body-inicio .inicio__imagenes .foto1 .foto2 {
-          padding: 2rem;
-          border-radius: 50%;
-          border: 1px solid black;
-          width: 100%;
-          transition: transform 3s ease-in-out; }
-      .body-inicio .inicio__imagenes picture .foto2:hover {
-        transform: scale(1.5); }
+      .body-inicio .inicio__imagenes .foto2 {
+        padding: 1rem;
+        border: 1px solid gray;
+        border-radius: 50%;
+        width: 100%;
+        transition: transform 3s ease-in-out; }
+      .body-inicio .inicio__imagenes .foto2:hover {
+        transform: scale(1.2);
+        border-radius: 50%; }
       @media screen and (max-width: 480px) {
         .body-inicio .inicio__imagenes body {
-          margin: 0.5rem; }
-        .body-inicio .inicio__imagenes header .navbar {
-          flex-wrap: wrap;
-          justify-content: center; }
+          margin: 0.5rem;
+          font-size: 1em; }
         .body-inicio .inicio__imagenes header {
           padding: 1em;
           justify-content: center; }
-        .body-inicio .inicio__imagenes h3 {
-          font-size: 1.4em; }
-        .body-inicio .inicio__imagenes .inicio {
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 1rem;
-          margin: 0.5rem;
-          font-family: 1.2em; }
-        .body-inicio .inicio__imagenes .inicio__imagenes {
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          justify-content: center; }
-        .body-inicio .inicio__imagenes .tituloChampaqui {
-          font-size: 2em; }
-        .body-inicio .inicio__imagenes .foto1 {
-          order: -1; }
-        .body-inicio .inicio__imagenes .foto2 {
-          flex-wrap: wrap; }
-        .body-inicio .inicio__imagenes .menu {
-          font-size: .8em; } }
-      @media screen and (max-width: 780px) {
-        .body-inicio .inicio__imagenes header .navbar {
-          flex-wrap: wrap;
-          justify-content: center; }
-        .body-inicio .inicio__imagenes .article-inicio {
-          width: 100%; } }
-      @media screen and (max-width: 320px) {
-        .body-inicio .inicio__imagenes header {
-          padding: 1em; }
           .body-inicio .inicio__imagenes header .navbar {
             flex-wrap: wrap;
             justify-content: center; }
-        .body-inicio .inicio__imagenes .article-inicio {
-          width: 100%; } }
+        .body-inicio .inicio__imagenes h3 {
+          font-size: small; } }
 
-.section-nosotros {
-  height: 100%;
-  background-image: url(../img/trigo.jpg); }
+@media screen and (max-width: 480px) and (max-width: 780px) {
+  .body-inicio .inicio__imagenes header .navbar {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .body-inicio .inicio__imagenes .inicio__article {
+    width: 100%; } }
 
-.article-nosotros {
-  font-size: 1.4em;
-  color: black;
-  margin: 3rem;
-  transition: all .5s ease-in-out;
-  animation: slideInLeft 1 ease-in-out 5s;
-  gap: 3rem; }
-
-.tituloChampaqui {
-  font-size: 4em;
-  text-align: center; }
+@media screen and (max-width: 480px) and (max-width: 320px) {
+  .body-inicio .inicio__imagenes header {
+    padding: 1em; }
+    .body-inicio .inicio__imagenes header .navbar {
+      flex-wrap: wrap;
+      justify-content: center; }
+  .body-inicio .inicio__imagenes .inicio__article {
+    width: 100%; } }
 
 .nosotros {
+  background-image: url(../img/trigo.jpg);
+  line-height: 3rem;
   flex-direction: row;
   flex-wrap: wrap; }
-
-.champaqui {
-  padding-top: 4rem; }
-  .champaqui__title {
-    font-size: 5em; }
-  .champaqui .imagenChampaqui {
-    display: flex;
-    align-items: center;
-    margin-top: 3rem;
-    flex-basis: 30%;
-    gap: 3rem;
-    border: 3px solid #FFFFFF;
-    transition: transform 3s ease-in-out; }
-
-.historia {
-  font-size: 1.4em;
-  line-height: 4em; }
+  .nosotros__section {
+    padding-top: 4rem; }
+    .nosotros__section .nosotros__title {
+      font-size: 5em;
+      color: white;
+      font-size: "Roboto";
+      text-shadow: 2px 2px 2px black;
+      font-weight: 700;
+      text-align: center;
+      padding: 3rem;
+      text-decoration: underline; }
+    .nosotros__section .nosotros__article {
+      font-size: small;
+      color: black;
+      margin: 3rem;
+      transition: all .5s ease-in-out;
+      animation: slideInLeft 1 ease-in-out 5s;
+      gap: 3rem;
+      background-color: rgba(222, 184, 135, 0.351); }
+    .nosotros__section .btn {
+      background-color: #3d1a1a;
+      color: white;
+      border: none; }
 
 @media screen and (max-width: 480px) {
   .nosotros {
-    justify-content: center;
-    font-size: 1em; }
-  aside {
-    justify-content: center; }
-  .imagenChampaqui {
-    order: -1; } }
-
-.main-servicios {
-  background-image: url(../img/trigo.jpg);
-  line-height: 3rem;
-  padding-top: 3rem; }
-
-.servicios {
-  display: flex;
-  flex-direction: column; }
-
-.servicios__parrafo {
-  line-height: 3rem;
-  font-weight: bold;
-  font-size: 1.6em;
-  margin-top: 5rem; }
-
-.p_servicios {
-  font-size: 1.5rem; }
-
-.servicios__titulo {
-  font-size: 4em;
-  text-align: center; }
-
-.servicios__titulo2 {
-  font-size: 1.6em;
-  text-decoration: underline; }
-
-.servicios__mision {
-  font-size: 1.6em; }
-
-@media screen and (max-width: 480px) {
-  .servicios__titulo {
-    font-size: 3em; }
-  .servicios__parrafo {
-    border: 2px solid #FFFFFF;
-    line-height: 3rem;
-    font-weight: bold;
-    font-size: 1.5em;
-    justify-content: center; }
-  .mainServicios {
-    font-size: 1em;
-    line-height: 2em;
     justify-content: center; } }
 
-.tituloGaleria {
-  font-size: 6em;
-  text-align: center;
-  align-items: center;
-  padding: 6rem;
-  text-decoration: underline; }
+@media screen and (max-width: 780px) {
+  .nosotros__title {
+    font-size: medium; } }
 
-.body-galeria {
+.servicios__main {
+  background-image: url(../img/trigo.jpg);
+  line-height: 3rem; }
+  .servicios__main H2 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px black; }
+  .servicios__main .servicios__titulo {
+    font-size: 5em;
+    color: white;
+    font-size: "Roboto";
+    text-shadow: 2px 2px 2px black;
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem;
+    text-decoration: underline; }
+  .servicios__main .servicios__parrafo {
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 2rem;
+    background-color: rgba(222, 184, 135, 0.351); }
+  .servicios__main .servicios__ganaderia, .servicios__main .servicios__agricultura {
+    font-size: 1.5rem;
+    color: black;
+    background-color: rgba(222, 184, 135, 0.351); }
+
+footer {
+  color: #FFFFFF; }
+
+@media screen and (max-width: 480px) {
+  .servicios__main {
+    font-size: 1em;
+    line-height: 2em;
+    justify-content: center; }
+    .servicios__main .servicios__titulo {
+      font-size: 3em; }
+    .servicios__main .servicios__parrafo {
+      border: 3px solid #FFFFFF;
+      line-height: 3rem;
+      font-weight: bold;
+      justify-content: center; } }
+
+.galeria__body {
+  padding-bottom: 5rem;
   background-image: url(../img/trigo.jpg);
   color: black; }
+  .galeria__body .galeria__titulo {
+    font-size: 5em;
+    color: white;
+    font-size: "Roboto";
+    text-shadow: 2px 2px 2px black;
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem;
+    text-decoration: underline; }
 
 @media screen and (max-width: 780px) {
-  .tituloGaleria {
-    font-size: 1.6em; } }
+  .galeria__titulo {
+    font-size: large; } }
 
-.body-premios {
+.premios__body {
   background-image: url(../img/fondo_45degreee_fabric.png); }
+  .premios__body .premios__titulo {
+    font-size: 5em;
+    color: white;
+    font-size: "Roboto";
+    text-shadow: 2px 2px 2px black;
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem;
+    text-decoration: underline; }
+  .premios__body .premios__tabla {
+    margin-bottom: 4rem;
+    padding: 4rem; }
+  .premios__body .premios__section {
+    color: black;
+    padding: 4rem; }
 
-.titulo-premios {
-  font-size: 6em;
-  text-align: center;
-  align-items: center;
-  padding: 6rem;
-  text-decoration: underline; }
-
-.premios-tabla {
-  margin-bottom: 4rem; }
-
-.sección-premios {
-  color: black; }
-
-.body-contacto > header {
-  font-weight: none; }
-
-.consulta {
-  line-height: 12rem; }
-
-.body-contacto {
+.contacto__body {
   background-image: url(../img/rollos.jpg);
-  color: black;
   font-family: "Inter", sans-serif; }
-
-.form-contacto {
-  font-weight: bold; }
-
-form {
-  font-size: 1.6em;
-  line-height: 4rem;
-  text-align: center;
-  padding: .8rem;
-  width: 400px; }
-
-.button {
-  font-size: 1.4em;
-  margin-bottom: 3rem;
-  width: 200px; }
+  .contacto__body .contacto__title {
+    font-size: x-large;
+    margin-bottom: 4rem;
+    color: black; }
+  .contacto__body .contacto__form {
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    line-height: 4rem;
+    text-align: center;
+    padding: .8rem;
+    margin-top: 4rem;
+    background-color: rgba(222, 184, 135, 0.351);
+    color: black; }
+    .contacto__body .contacto__form .form-label {
+      font-size: 1em; }
+    .contacto__body .contacto__form .contacto__btn {
+      margin-bottom: 2rem;
+      width: 100px;
+      padding: .2rem;
+      background-color: #3d1a1a;
+      color: white;
+      border: none; }
 
 @media screen and (max-width: 480px) {
   form {

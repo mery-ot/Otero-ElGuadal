@@ -1,5 +1,18 @@
 /* Helpers */
 
+
+@mixin title ($size: 2em, $color:white, $font:'Roboto', $shadow: 2px 2px 2px black, $weight: 0, $align: center, $padding:0, $decoration: none) {
+    font-size: $size;
+    color: $color;
+    font-size: $font;
+    text-shadow: $shadow;
+    font-weight:$weight;
+    text-align: $align;
+    padding:$padding;
+    text-decoration: $decoration;
+}
+        
+
 .flex-row {
     display: flex;
 }

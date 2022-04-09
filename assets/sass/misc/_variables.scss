@@ -1,6 +1,23 @@
 $principal: #3d1a1a;
 $secondary: #FFFFFF;
 $font-primary: 'Inter', sans-serif;
-$text-lg: 2em;
-$text-md: 1.6em;
-$text-sm: 1.4em;
+$font-secondary: 'Roboto', sans-serif;
+
+$btn-link-color: #3d1a1a;
+
+
+$sizes: (
+    xxlarge: 5em,
+    xlarge: 3em,
+    large: 2em,
+    medium: 1.6em,
+    small: 1.4em,
+    xsmall: 1em,
+    xxsmall: 0.8em
+);
+
+@each $var, $val in $sizes {
+    .fs-#{$var} {
+    font-size: #{$val};
+}
+}

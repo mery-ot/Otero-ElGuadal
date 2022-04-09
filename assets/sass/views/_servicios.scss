@@ -1,63 +1,64 @@
-.main-servicios {
+.servicios__main {
 
     background-image: url(../img/trigo.jpg);
     line-height: 3rem;
-    padding-top: 3rem;
+    
+    H2{
+        color: $secondary;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    
+    .servicios__titulo {
+        @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+        
+    }
+    
+    .servicios__parrafo {
+        line-height: 3rem;
+        font-weight: bold;
+        font-size:medium;
+        margin-top: 2rem;
+        background-color:rgba(222, 184, 135, 0.351);
+        
+    }
+    .servicios__ganaderia {
+        font-size: 1.5rem;
+        color:black;
+        background-color:rgba(222, 184, 135, 0.351);
+        
+    
+    }
+    .servicios__agricultura {
+        @extend .servicios__ganaderia;
+    }
+    
 }
 
-.servicios {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.servicios__parrafo {
-    line-height: 3rem;
-    font-weight: bold;
-    font-size: $text-md;
-    margin-top: 5rem;
-}
-
-.p_servicios {
-    font-size: 1.5rem;
-}
-
-.servicios__titulo {
-    font-size: 4em;
-    text-align: center;
-}
-
-.servicios__titulo2 {
-
-    font-size: $text-md;
-    text-decoration: underline;
-
-}
-
-.servicios__mision {
-    font-size: $text-md;
+footer {
+    color: $secondary;
 }
 
 @media screen and (max-width: 480px) {
 
-.servicios__titulo {
-    font-size: 3em;
-}
-
-.servicios__parrafo {
-
-    border: 2px solid $secondary;
-    line-height: 3rem;
-    font-weight: bold;
-    font-size: 1.5em;
-    justify-content: center;
-}
-
-.mainServicios {
+    .servicios__main {
 
     font-size: 1em;
     line-height: 2em;
     justify-content: center;
 
-}
+    .servicios__titulo {
+        font-size: 3em;
+    }
+    .servicios__parrafo {
+    
+        border: 3px solid $secondary;
+        line-height: 3rem;
+        font-weight: bold;
+        justify-content: center;
+    }
+    
+    
+    }
+
 }

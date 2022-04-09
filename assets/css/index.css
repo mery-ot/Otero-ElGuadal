@@ -1,11 +1,6 @@
-Imports
+Imports @import url('https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
-
- Variables 
-
-:root {
+Variables:root {
     --principal: #20123d;
     --secondary: #FFFFFF;
     --font-primary: 'Inter', sans-serif;
@@ -16,8 +11,7 @@ Imports
 
 /* Reset */
 *,
-*::before 
-*::after {
+*::before *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,7 +24,7 @@ html {
     font-size: 62.5%;
     color: var(--secondary);
     font-family: var(--font-primary);
-    
+
 }
 
 body {
@@ -45,7 +39,7 @@ ul {
 a {
     text-decoration: none;
     display: inline-block;
-    color:var(--secondary);
+    color: var(--secondary);
 }
 
 
@@ -69,7 +63,7 @@ a {
 
 header {
     background-color: var(--principal);
-   
+
 }
 
 .navbar {
@@ -80,7 +74,7 @@ header {
     padding: 0 2rem;
     width: 100%;
     opacity: none;
-    
+
 }
 
 .navbar-nav {
@@ -92,7 +86,7 @@ header {
 
 .nav-item {
     padding: 1rem;
-    color:var(--secondary);
+    color: var(--secondary);
 }
 
 .nav-link {
@@ -105,7 +99,7 @@ header {
 }
 
 .navbar-dark .navbar-toggler {
-    border-color:white;
+    border-color: white;
 }
 
 .navbar .nav__item:hover .nav__link {
@@ -137,16 +131,17 @@ a .nav-link:hover {
 }
 
 .dropdown-menu {
-    background-color:white;
-    color:var(--secondary);
+    background-color: white;
+    color: var(--secondary);
 }
 
 .dropdown-item:hover {
 
     background-color: rgb(218, 147, 147);
     color: rgb(0, 0, 0);
-}*/
+}
 
+*/
 /*INICIO*/
 
 .body-inicio {
@@ -154,8 +149,8 @@ a .nav-link:hover {
     min-height: 100vh;
     gap: 3rem;
     color: var(--secondary);
-    font-family:var(--font-primary);
-   
+    font-family: var(--font-primary);
+
 }
 
 .inicio {
@@ -222,8 +217,9 @@ picture .foto2:hover {
 hr {
     color: black;
 
-}*/
+}
 
+*/
 /*NOSOTROS*/
 
 .section-nosotros {
@@ -277,7 +273,7 @@ hr {
 }
 
 .historia {
-    font-size:var(--text-sm);
+    font-size: var(--text-sm);
     line-height: 4em;
 
 }
@@ -330,7 +326,7 @@ hr {
 .tituloGaleria {
     font-size: 4em;
     text-align: center;
-    font-size:var(--text-lg);
+    font-size: var(--text-lg);
     align-items: center;
 
 }
@@ -415,7 +411,7 @@ footer {
 }
 
 .footer-contacto {
-    color:var(--secondary);
+    color: var(--secondary);
 }
 
 
@@ -424,7 +420,6 @@ footer {
 @media screen and (max-width: 480px) {
 
 
-    
     header .navbar {
         flex-wrap: wrap;
         justify-content: center;
@@ -437,7 +432,7 @@ footer {
         justify-content: center;
 
     }
-   
+
     h3 {
         font-size: var(--text-sm);
     }
@@ -518,51 +513,51 @@ footer {
     }
 
 
-@media screen and (max-width: 780px) {
+    @media screen and (max-width: 780px) {
 
-    
 
-    header .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
 
+        header .navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .article-inicio {
+            width: 100%;
+        }
+
+
+        @media screen and (max-width: 320px) {
+
+
+            header {
+
+                padding: 1em;
+
+            }
+
+            header .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .article-inicio {
+                width: 100%;
+            }
+
+
+            @keyframes fancy_rotate {
+
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+
+            }
+        }
     }
-
-    .article-inicio {
-        width:100%;
-    }
-
-
-@media screen and (max-width: 320px) {
-
- 
-header {
-
-    padding: 1em;
-
-}
-
-header .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.article-inicio {
-    width:100%;
-}
-
-
-@keyframes fancy_rotate {
-
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-}
-}
 }
