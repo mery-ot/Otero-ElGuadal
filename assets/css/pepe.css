@@ -1,0 +1,563 @@
+/* Imports @import url('https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
+
+Variables:root {
+    --principal: #20123d;
+    --secondary: #FFFFFF;
+    --font-primary: 'Inter', sans-serif;
+    --text-lg: 2em;
+    --text-md: 1.6em;
+    --text-sm: 1.4em;
+}
+
+/* Reset 
+*,
+*::before *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globals 
+
+html {
+
+    font-size: 62.5%;
+    color: var(--secondary);
+    font-family: var(--font-primary);
+
+}
+
+body {
+    background-color: var(--principal);
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--secondary);
+}
+
+
+/* Helpers 
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* HEADER 
+
+header {
+    background-color: var(--principal);
+
+}
+
+.navbar {
+
+    min-height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    width: 100%;
+    opacity: none;
+
+}
+
+.navbar-nav {
+    justify-content: space-between;
+    margin: 0 4rem;
+    padding: 2rem;
+
+}
+
+.nav-item {
+    padding: 1rem;
+    color: var(--secondary);
+}
+
+.nav-link {
+    color: var(--secondary);
+}
+
+.navbar-toggler-icon {
+    color: white;
+
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: white;
+}
+
+.navbar .nav__item:hover .nav__link {
+    display: block;
+    color: var(--principal);
+}
+
+.navbar li:hover>ul {
+    display: block;
+}
+
+.navbar li ul li {
+    position: relative;
+}
+
+header .logo {
+    flex-basis: 20%;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+a .nav-link:hover {
+
+    background-color: rgb(218, 147, 147);
+    border-bottom: white;
+    border-style: 1px solid white;
+
+}
+
+.dropdown-menu {
+    background-color: white;
+    color: var(--secondary);
+}
+
+.dropdown-item:hover {
+
+    background-color: rgb(218, 147, 147);
+    color: rgb(0, 0, 0);
+}
+
+*/
+/*INICIO
+
+.body-inicio {
+
+    min-height: 100vh;
+    gap: 3rem;
+    color: var(--secondary);
+    font-family: var(--font-primary);
+
+}
+
+.inicio {
+    display: flex;
+    font-size: var(--text-sm);
+    gap: 3rem;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: rgba(254, 254, 254, 0.886);
+    color: black;
+
+}
+
+.inicio__article {
+    line-height: 2rem;
+    max-width: 1080px;
+
+}
+
+.inicio__imagenes {
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    min-width: 320px;
+    margin-top: 3rem;
+    padding: 2rem;
+    justify-content: center;
+
+}
+
+.inicio__titulo {
+    width: 100%;
+    background-image: url(../img/fondo_dust_scratches.png );
+    font-size: var(--text-lg);
+    text-align: center;
+    text-decoration: underline;
+    padding: 5rem;
+    margin-bottom: 4rem;
+}
+
+.foto1 {
+    padding: 2rem;
+    margin-right: 5rem;
+    animation: zoomIn 1 ease-in-out 3s;
+
+}
+
+picture .foto2 {
+    padding: 2rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 100%;
+    animation: fancy_rotate 4s 2 alternate cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: transform 5s ease-in-out;
+
+}
+
+picture .foto2:hover {
+    transform: scale(1.5);
+}
+
+hr {
+    color: black;
+
+}
+
+*/
+/*NOSOTROS
+
+.section-nosotros {
+    background-image: url(../img/trigo\ 2.jpg);
+}
+
+.main-nosotros {
+
+    color: white;
+}
+
+.article-nosotros {
+
+    font-size: var(--text-sm);
+    color: black;
+    margin-right: 2rem;
+    transition: all .5s ease-in-out;
+    animation: flip 1 ease-in-out 5s;
+}
+
+
+.tituloChampaqui {
+    font-size: 4em;
+    text-align: center;
+
+}
+
+.nosotros {
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.champaqui {
+    margin-top: 4rem;
+}
+
+.imagenChampaqui {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    flex-basis: 30%;
+    gap: 2rem;
+    border: 3px solid white;
+    transition: transform 3s ease-in-out;
+
+}
+
+.imagenChampaqui:hover {
+    transform: translate3d(12px, 40%, 3em);
+}
+
+.historia {
+    font-size: var(--text-sm);
+    line-height: 4em;
+
+}
+
+/*SERVICIOS
+
+.main-servicios {
+
+    background-image: url(../img/trigo.jpg);
+    line-height: 3rem;
+    padding-top: 3rem;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.servicios__parrafo {
+    line-height: 3rem;
+    font-weight: bold;
+    font-size: var(--text-md);
+    margin-top: 5rem;
+}
+
+.p_servicios {
+    font-size: 1.5rem;
+}
+
+.servicios__titulo {
+    font-size: 4em;
+    text-align: center;
+}
+
+.servicios__titulo2 {
+
+    font-size: var(--text-md);
+    text-decoration: underline;
+
+}
+
+.servicios__mision {
+    font-size: var(--text-md);
+}
+
+/*GALERIA
+
+
+.tituloGaleria {
+    font-size: 4em;
+    text-align: center;
+    font-size: var(--text-lg);
+    align-items: center;
+
+}
+
+.body-galeria {
+
+    background-image: url(../img/trigo.jpg);
+    color: var(--secondary);
+}
+
+
+/*CONTACTO
+
+
+.body-contacto>header {
+    font-weight: none;
+}
+
+.consulta {
+    line-height: 12rem;
+}
+
+.body-contacto {
+    background-image: url(../img/rollos.jpg);
+    color: black;
+    font-family: var(--font-primary);
+
+}
+
+.form-contacto {
+    font-weight: bold;
+}
+
+form {
+    font-size: var(--text-md);
+    line-height: 4rem;
+    text-align: center;
+    padding: .8rem;
+    width: 400px;
+}
+
+
+.button {
+
+    font-size: var(--text-sm);
+    margin-bottom: 3rem;
+    width: 200px;
+}
+
+/*PREMIOS
+
+.body-premios {
+    background-image: url(../img/fondo_45degreee_fabric.png);
+
+}
+
+.titulo-premios {
+
+    color: black;
+    margin: 4rem;
+}
+
+.premios-tabla {
+    margin-bottom: 4rem;
+}
+
+.sección-premios {
+    color: black;
+}
+
+
+/*FOOTER
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    border-top: 1px solid white;
+    background-color: black;
+}
+
+.footer-contacto {
+    color: var(--secondary);
+}
+
+
+/*MEDIA QUERIES
+
+@media screen and (max-width: 480px) {
+
+
+    header .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    header {
+
+        padding: 1em;
+        justify-content: center;
+
+    }
+
+    h3 {
+        font-size: var(--text-sm);
+    }
+
+    .inicio {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0.5rem;
+        font-family: 1.2em;
+
+    }
+
+    .inicio__imagenes {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .tituloChampaqui {
+        font-size: 2em;
+    }
+
+
+    .menu {
+        font-size: .8em;
+    }
+
+    .nosotros {
+        justify-content: center;
+        font-size: 1em;
+
+    }
+
+    aside {
+        justify-content: center;
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: .8em;
+
+    }
+
+    .servicios__titulo {
+        font-size: 3em;
+    }
+
+    .servicios__parrafo {
+
+        border: 2px solid var(--secondary);
+        line-height: 3rem;
+        font-weight: bold;
+        font-size: 1.5em;
+        justify-content: center;
+    }
+
+    .mainServicios {
+
+        font-size: 1em;
+        line-height: 2em;
+        justify-content: center;
+
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    @media screen and (max-width: 780px) {
+
+
+
+        header .navbar {
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .article-inicio {
+            width: 100%;
+        }
+
+
+        @media screen and (max-width: 320px) {
+
+
+            header {
+
+                padding: 1em;
+
+            }
+
+            header .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .article-inicio {
+                width: 100%;
+            }
+
+
+            @keyframes fancy_rotate {
+
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+
+            }
+        }
+    }
+} */

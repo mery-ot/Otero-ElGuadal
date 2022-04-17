@@ -30,9 +30,12 @@
             width: 100%;
             font-family: 'Expletus Sans', cursive;
             background-image: url(../img/ganaderia3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             font-size: 4em;
             text-align: center;
-            padding: 8rem;
+            padding: 6rem;
             margin-bottom: 4rem;
             animation: zoomIn 1 ease-in-out 5s;
         }
