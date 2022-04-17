@@ -6,7 +6,7 @@
     color: black;
     
     .galeria__titulo {
-        @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+        @include title(5em, #3d1a1a, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
     }
 
     #galeria .col-lg-4 {

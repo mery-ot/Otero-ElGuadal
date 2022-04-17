@@ -276,7 +276,7 @@ footer {
   color: black; }
   .galeria__body .galeria__titulo {
     font-size: 5em;
-    color: white;
+    color: #3d1a1a;
     font-size: "Roboto";
     text-shadow: 2px 2px 2px black;
     font-weight: 700;
@@ -342,7 +342,7 @@ footer {
       border: none; }
 
 @media screen and (max-width: 480px) {
-  .contacto-title {
-    font-size: medium; }
-  .form-label {
+  .contacto__body .contacto-title {
+    font-size: large; }
+  .contacto__body .form-label {
     font-size: small; } }
