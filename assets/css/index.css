@@ -102,11 +102,11 @@ header {
           color: white; }
 
 footer {
-  height: 10vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: var(--text-sm);
+  font-size: small;
   border-top: 1px solid white;
   background-color: black; }
 
@@ -136,7 +136,7 @@ footer {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      font-size: 4em;
+      font-size: 3em;
       text-align: center;
       padding: 6rem;
       margin-bottom: 4rem;
@@ -272,7 +272,7 @@ footer {
 
 .galeria__body {
   padding-bottom: 5rem;
-  background-image: url(../img/trigo.jpg);
+  background-color: #FFFFFF;
   color: black; }
   .galeria__body .galeria__titulo {
     font-size: 5em;
@@ -283,10 +283,18 @@ footer {
     text-align: center;
     padding: 3rem;
     text-decoration: underline; }
+  .galeria__body #galeria .col-lg-4 {
+    margin: 0 !important;
+    padding: 2.5rem; }
+  .galeria__body #galeria img {
+    width: 100%;
+    height: 250px; }
+    .galeria__body #galeria img:hover {
+      border: 5px solid white; }
 
 @media screen and (max-width: 780px) {
   .galeria__titulo {
-    font-size: large; } }
+    font-size: medium; } }
 
 .premios__body {
   background-image: url(../img/fondo_45degreee_fabric.png); }

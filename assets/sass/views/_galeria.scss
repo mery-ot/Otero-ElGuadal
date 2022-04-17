@@ -2,17 +2,32 @@
 .galeria__body {
 
     padding-bottom:5rem;
-    background-image: url(../img/trigo.jpg);
+    background-color: $secondary;
     color: black;
     
     .galeria__titulo {
         @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
     }
+
+    #galeria .col-lg-4 {
+        margin:0 !important;
+        padding: 2.5rem;
+    }
+    #galeria img {
+        width: 100%;
+        height: 250px;
+
+        &:hover {
+            border: 5px solid white;
+        }
+    }
+
+    
 }
 
 @media screen and (max-width: 780px) {
 
 .galeria__titulo {
-    font-size:large;
+    font-size:medium;
 }
 }
