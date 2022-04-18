@@ -3,12 +3,13 @@
 
     .premios__titulo {
 
-        @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+        @include title(4em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
 
     }
     .premios__tabla {
         margin-bottom: 4rem;
         padding: 4rem;
+        font-size: small;
     }
 
     .premios__section {
@@ -16,4 +17,20 @@
         padding: 4rem;
     }
    
+}
+
+@media screen and (max-width: 480px) {
+
+.premios__body{
+        .premios__titulo {
+            font-size: 3em;
+        }
+
+        
+        .premios__tabla {
+          font-size: x-small;
+        }
+        
+    }
+
 }

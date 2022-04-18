@@ -38,15 +38,26 @@
 
 @media screen and (max-width: 480px) {
 
-    .nosotros {
-        justify-content: center;
-       
-    }
+    .nosotros__section {
+        .nosotros__title {
+            font-size: 3em ;
+        }
+        .card-text {
+            font-size: smaller;
+        }
 
+        .nosotros__article {
+            font-size: smaller;
+        }
+    }
+  
 }
 
 @media screen and (max-width:780px) {
+    
+    
+
     .nosotros__title {
-        font-size: medium;
+        font-size: 4em;
     }
 }

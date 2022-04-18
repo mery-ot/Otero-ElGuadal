@@ -1,30 +1,20 @@
-
-.body-inicio {
+.inicio__body {
 
     min-height: 100vh;
     gap: 3rem;
     color: $secondary;
     font-family: $font-primary;
-    
-    
+
+
     .inicio {
         display: flex;
-        font-size:small;
+        font-size: small;
         gap: 3rem;
         text-align: left;
         padding: 0 2rem;
-        background-color:rgba(255, 255, 255, 0.351);
+        background-color: rgba(255, 255, 255, 0.351);
         color: black;
 
-        
-        &__article {
-
-            margin-top: 4rem;
-            line-height: 4rem;
-            max-width: 1080px;
-
-        }
-       
         &__titulo {
 
             color: white;
@@ -41,7 +31,19 @@
             animation: zoomIn 1 ease-in-out 5s;
         }
 
-    
+
+        &__article {
+
+            line-height: 4rem;
+            max-width: 1080px;
+
+            h2 {
+                margin-top: 4rem;
+            }
+
+        }
+
+
         &__imagenes {
 
             display: flex;
@@ -54,10 +56,10 @@
             justify-content: center;
 
             .foto1 {
-                
+
                 margin-right: 5rem;
                 animation: zoomIn 1 ease-in-out 3s;
-                
+
             }
 
             .foto2 {
@@ -66,77 +68,30 @@
                 border-radius: 50%;
                 width: 100%;
                 transition: transform 3s ease-in-out;
-                
-                }
-           
-            .foto2:hover {
-            transform: scale(1.2);
-            border-radius: 50%;
+
             }
+
+            .foto2:hover {
+                transform: scale(1.2);
+                border-radius: 50%;
+            }
+
+
           
 
-            @media screen and (max-width: 480px) {
 
 
-                body {
-                    margin: 0.5rem;
-                    font-size:1em;
 
-                }
-              
-                header {
+@media screen and (max-width: 480px) {
 
-                    padding: 1em;
-                    justify-content: center;
+     p {
+       
+          font-size:0.8em;
+        }
 
-                    & .navbar {
-                        flex-wrap: wrap;
-                        justify-content: center;
-    
-                    }
-    
-                }
-
-                h3 {
-                    font-size: small;
-                }
-
-         
-            @media screen and (max-width: 780px) {
-
-
-                header .navbar {
-                    flex-wrap: wrap;
-                    justify-content: center;
-
-                }
-
-                .inicio__article {
-                    width: 100%;
-                }
-           
-            }
-
-            @media screen and (max-width: 320px) {
-
-
-                header {
-
-                    padding: 1em;
-
-                    & .navbar {
-                        flex-wrap: wrap;
-                        justify-content: center;
-                    }
-                }
-
-                .inicio__article {
-                    width: 100%;
                 }
 
             }
-            }
-
         }
     }
-}
+

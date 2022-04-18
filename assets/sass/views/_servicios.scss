@@ -23,7 +23,7 @@
         
     }
     .servicios__ganaderia {
-        font-size: 1.5rem;
+        font-size: 1.5em;
         color:black;
         background-color:rgba(222, 184, 135, 0.351);
         
@@ -42,22 +42,27 @@ footer {
 @media screen and (max-width: 480px) {
 
     .servicios__main {
-
+       
     font-size: 1em;
     line-height: 2em;
     justify-content: center;
 
-    .servicios__titulo {
-        font-size: 3em;
+        .servicios__titulo {
+            font-size: 3em;
     }
-    .servicios__parrafo {
+        .servicios__parrafo {
     
-        border: 3px solid $secondary;
-        line-height: 3rem;
-        font-weight: bold;
-        justify-content: center;
+            border: 3px solid $secondary;
+            line-height: 3rem;
+            font-weight: bold;
+            justify-content: center;
+            font-size: small;
     }
-    
+        .servicios__card {
+            .servicios__ganaderia {
+            font-size: x-small;
+        }
+    }
     
     }
 

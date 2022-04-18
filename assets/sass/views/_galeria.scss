@@ -6,6 +6,7 @@
     color: black;
     
     .galeria__titulo {
+              
         @include title(5em, #3d1a1a, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
     }
 
@@ -21,13 +22,14 @@
             border: 5px solid white;
         }
     }
-
     
 }
 
 @media screen and (max-width: 780px) {
 
+#galeria {
 .galeria__titulo {
-    font-size:medium;
+    font-size: 4em;
+}
 }
 }
