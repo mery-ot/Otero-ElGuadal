@@ -69,36 +69,33 @@ header {
     border-radius: 50%; }
   header .navbar {
     min-height: 15vh;
-    align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
     width: 100%; }
-    header .navbar .navbar-nav {
-      justify-content: space-between;
-      margin: 0 4rem;
-      padding: 2rem; }
-      header .navbar .navbar-nav .nav-item {
+    header .navbar .navbar-collapse {
+      flex-grow: unset; }
+      header .navbar .navbar-collapse .nav-item {
         padding: 1rem;
         color: #FFFFFF; }
-        header .navbar .navbar-nav .nav-item .nav-link {
+        header .navbar .navbar-collapse .nav-item .nav-link {
           border-bottom: 2px solid #3d1a1a; }
-          header .navbar .navbar-nav .nav-item .nav-link:hover {
+          header .navbar .navbar-collapse .nav-item .nav-link:hover {
             border-bottom: 2px solid #FFFFFF;
             border-color: #FFFFFF; }
-        header .navbar .navbar-nav .nav-item .dropdown-menu {
+        header .navbar .navbar-collapse .nav-item .dropdown-menu {
           background-color: white;
           color: #FFFFFF; }
-          header .navbar .navbar-nav .nav-item .dropdown-menu.dropdown-item:hover {
+          header .navbar .navbar-collapse .nav-item .dropdown-menu.dropdown-item:hover {
             background-color: #da9393;
             color: black; }
-      header .navbar .navbar-nav li:hover > ul {
+      header .navbar .navbar-collapse li:hover > ul {
         display: block;
         color: #FFFFFF; }
-      header .navbar .navbar-nav li ul li {
+      header .navbar .navbar-collapse li ul li {
         position: relative; }
-      header .navbar .navbar-nav .navbar-dark .navbar-toggler {
+      header .navbar .navbar-collapse .navbar-dark .navbar-toggler {
         border-color: white; }
-        header .navbar .navbar-nav .navbar-dark .navbar-toggler .navbar-toggler-icon {
+        header .navbar .navbar-collapse .navbar-dark .navbar-toggler .navbar-toggler-icon {
           color: white; }
 
 footer {
@@ -122,9 +119,10 @@ footer {
     gap: 3rem;
     text-align: left;
     padding: 0 2rem;
-    background-color: rgba(222, 184, 135, 0.351);
+    background-color: rgba(255, 255, 255, 0.351);
     color: black; }
     .body-inicio .inicio__article {
+      margin-top: 4rem;
       line-height: 4rem;
       max-width: 1080px; }
     .body-inicio .inicio__titulo {
@@ -136,10 +134,9 @@ footer {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      font-size: 3em;
+      font-size: 4em;
       text-align: center;
-      padding: 6rem;
-      margin-bottom: 4rem;
+      padding: 7rem 4rem;
       animation: zoomIn 1 ease-in-out 5s; }
     .body-inicio .inicio__imagenes {
       display: flex;

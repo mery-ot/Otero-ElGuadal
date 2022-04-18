@@ -11,74 +11,65 @@ header {
     .navbar {
 
         min-height: 15vh;
-        align-items: center;
         justify-content: space-between;
         padding: 0 2rem;
         width: 100%;
 
-        .navbar-nav {
-            justify-content: space-between;
-            margin: 0 4rem;
-            padding: 2rem;
+
+        .navbar-collapse {
+
+            flex-grow: unset;
+
 
             .nav-item {
                 padding: 1rem;
                 color: $secondary;
-                
-            .nav-link {
-                
-                border-bottom: 2px solid $principal;
-                
-                &:hover {
-                    border-bottom: 2px solid $secondary;
-                    border-color: $secondary;
+
+                .nav-link {
+
+                    border-bottom: 2px solid $principal;
+
+                    &:hover {
+                        border-bottom: 2px solid $secondary;
+                        border-color: $secondary;
+                    }
+
                 }
-            
 
-        }
+                .dropdown-menu {
+                    background-color: white;
+                    color: $secondary;
 
-      
-        .dropdown-menu {
-            background-color: white;
-            color: $secondary;
+                    &.dropdown-item:hover {
 
-            &.dropdown-item:hover {
-    
-                background-color: rgb(218, 147, 147);
-                color: rgb(0, 0, 0);
-            }
-        }   
-               
-
-        }
-
-        & li:hover>ul {
-            display: block;
-            color: $secondary;
-
-        }
-
-        & li ul li {
-            position: relative;
-        }
-
-       
-
-        .navbar-dark .navbar-toggler {
-            border-color: white;
-
-            .navbar-toggler-icon {
-                color: white;
+                        background-color: rgb(218, 147, 147);
+                        color: rgb(0, 0, 0);
+                    }
+                }
 
             }
+
+            & li:hover>ul {
+                display: block;
+                color: $secondary;
+
+            }
+
+            & li ul li {
+                position: relative;
+            }
+
+
+            .navbar-dark .navbar-toggler {
+                border-color: white;
+
+                .navbar-toggler-icon {
+                    color: white;
+
+                }
+            }
+
         }
-
-        
-
 
     }
-
-
 }
-}
-
