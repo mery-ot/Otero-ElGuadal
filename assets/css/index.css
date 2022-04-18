@@ -333,7 +333,7 @@ footer {
       border: none; }
 
 @media screen and (max-width: 480px) {
-  .contacto__body .contacto-title {
+  .contacto__form .contacto__title {
     font-size: large; }
-  .contacto__body .form-label {
-    font-size: small; } }
+  .contacto__form label {
+    font-size: 0.8em; } }

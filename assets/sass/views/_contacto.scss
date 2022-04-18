@@ -43,17 +43,19 @@
 
 @media screen and (max-width: 480px) {
 
-    .contacto__body {
+    .contacto__form {
 
     
-    .contacto-title {
+        .contacto__title {
 
-        font-size: large;
+         font-size: large;
+        }
+        
+        label {
+
+            font-size: 0.8em;
     }
-    .form-label {
-
-    font-size: small;
-
-}
-}
-}
+    }
+           
+    } 
+    
