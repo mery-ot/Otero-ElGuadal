@@ -3,7 +3,7 @@
 
     .premios__titulo {
 
-        @include title(4em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+        @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem, underline);
 
     }
     .premios__tabla {
@@ -15,6 +15,17 @@
     .premios__section {
         color: black;
         padding: 4rem;
+    }
+
+   
+    .premios__foto img {
+
+        transition:all .5s ease-in-out;
+
+        &:hover{
+            filter: saturate(180%);
+            transition:all .5s ease-in-out;
+        }
     }
    
 }

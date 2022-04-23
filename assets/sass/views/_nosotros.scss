@@ -4,6 +4,13 @@
     line-height: 3rem;
     flex-direction: row;
     flex-wrap: wrap;
+ 
+    .btn {
+        // background-color: $btn-link-color;
+        color:white;
+        border: none;
+        background-color: rgb(185, 131, 5);
+    }
 
     &__section {
         padding-top: 4rem;
@@ -11,29 +18,65 @@
 
         .nosotros__title {
 
-            @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+            @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem, underline);
     
         }
-             
-        .nosotros__article {
-
-            font-size: small;
-            color: black;
-            margin: 3rem;
-            transition: all .5s ease-in-out;
-            animation: slideInLeft 1 ease-in-out 5s;
-            gap: 3rem;
+    
+        
+        .card {
             background-color:rgba(222, 184, 135, 0.351);
-        }
+    
+            .card-header{
+       
+                font-size: 2em;
+                font-weight: 600;
+                background-color:rgba(222, 184, 135, 0.351);
+                border: 1px double rgba(218, 156, 76, 0.351);
+                padding: 3rem;
+                }
+                .card-body1 {
 
-        .btn {
-            background-color: $btn-link-color;
-            color:white;
-            border: none;
-        }
+                padding: 4rem;
+                font-size: small;
+                justify-content: left;
+              
 
+                }
+            
+
+                .card-body2 {
+                font-size: small;
+                justify-content: left;
+                background-color: rgba(222, 184, 135, 0.351);
+                 
+                .card-title2 {
+                    color: $principal;    
+                    font-size: 4em;
+                    text-shadow: 2px 2px black;
+                }    
+                
+                
+                .card-body3 {
+                    font-size: small;
+                    justify-content: left;
+                    background-color: rgba(222, 184, 135, 0.351);
+
+                }
+
+                .champaqui {
+                    background-color: rgba(222, 184, 135, 0.351);
+                    
+                }
+
+                #historia {
+                    font-size: small                    ;
+                    background-color: rgba(222, 184, 135, 0.351);
+                }
+            }
+    
     }
 
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -46,10 +89,7 @@
             font-size: smaller;
         }
 
-        .nosotros__article {
-            font-size: smaller;
-        }
-    }
+      }
   
 }
 

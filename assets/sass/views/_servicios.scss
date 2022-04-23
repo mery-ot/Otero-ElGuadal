@@ -10,10 +10,10 @@
 
     
     .servicios__titulo {
-        @include title(5em, white, 'Roboto', 2px 2px 2px black, 700, center, 3rem, underline);
+        @include title(4em, white, 'Expletus Sans', 2px 2px 2px black, 700, center, 3rem, underline);
         
     }
-    
+   
     .servicios__parrafo {
         line-height: 3rem;
         font-weight: bold;
@@ -53,6 +53,8 @@ footer {
         .servicios__parrafo {
     
             border: 3px solid $secondary;
+            border-radius: 15%;
+            border-color: rgba(222, 184, 135, 0.351);
             line-height: 3rem;
             font-weight: bold;
             justify-content: center;
