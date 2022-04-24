@@ -241,18 +241,20 @@ footer {
         font-size: small;
         justify-content: left; }
     .nosotros__section .card2 {
-      background-color: rgba(222, 184, 135, 0.351); }
+      background-color: rgba(222, 184, 135, 0.351);
+      padding: 2rem; }
       .nosotros__section .card2 .card-body2 {
         font-size: small;
         color: black;
         justify-content: left;
-        background-color: rgba(222, 184, 135, 0.351); }
+        background-color: rgba(222, 184, 135, 0.351);
+        margin-left: 2rem; }
         .nosotros__section .card2 .card-body2 .card-title2 {
-          color: #3d1a1a;
-          font-size: xx-large;
-          text-shadow: 1px 1px 1px black;
-          justify-items: center; }
+          color: #b98305;
+          font-size: 3em;
+          text-shadow: 2px 2px 2px black; }
         .nosotros__section .card2 .card-body2 .champaqui {
+          margin-top: 2rem;
           background-color: rgba(222, 184, 135, 0.351); }
       .nosotros__section .card2 #historia {
         font-size: small;
@@ -408,9 +410,14 @@ footer {
       margin-bottom: 2rem;
       width: 100px;
       padding: .2rem;
-      background-color: #3d1a1a;
+      border: none;
       color: white;
-      border: none; }
+      border-bottom: 2px solid rgba(0, 0, 0, 0.34);
+      background-color: #b98305; }
+  .contacto__body iframe {
+    text-align: center;
+    width: 30rem;
+    height: 30rem; }
 
 @media screen and (max-width: 480px) {
   .contacto__form .contacto__title {

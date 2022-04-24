@@ -58,6 +58,7 @@
 
         .card2 {
             background-color:rgba(222, 184, 135, 0.351);
+            padding: 2rem;
           
 
             .card-body2 {
@@ -65,16 +66,18 @@
                 color: black;
                 justify-content: left;
                 background-color: rgba(222, 184, 135, 0.351);
+                margin-left: 2rem;
                  
                 .card-title2 {
-                    color: $principal;    
-                    font-size: xx-large;
-                    text-shadow: 1px 1px 1px black;
-                    justify-items: center;
+                    color: rgb(185, 131, 5);    
+                    font-size: 3em;
+                    text-shadow: 2px 2px 2px black;
+                   
                 }    
                         
 
                 .champaqui {
+                    margin-top: 2rem;
                     background-color: rgba(222, 184, 135, 0.351);
                     
                 }

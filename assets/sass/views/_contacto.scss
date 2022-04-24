@@ -34,14 +34,29 @@
 
             margin-bottom: 2rem;
             width: 100px;
-            padding: .2rem;
-            background-color: $btn-link-color;
-            color:white;
+            padding: .2rem;                      
             border: none;
+            color:white;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.34);
+            background-color: rgb(185, 131, 5);
 
         }
-        
-        
+                
+    }
+    
+    // .row>* {
+    //     // flex-shrink: 0;
+    //     // width: 40%;
+    //     // max-width: 100%;
+    //     // padding-right: calc(var(--bs-gutter-x) * .5);
+    //     // padding-left: calc(var(--bs-gutter-x) * .5);
+    //     // margin-top: var(--bs-gutter-y);
+    // }
+
+    iframe {
+        text-align: center;
+        width: 30rem;
+        height: 30rem;
     }
 }
 
