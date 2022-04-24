@@ -10,16 +10,19 @@
 
     
     .servicios__titulo {
-        @include title(4em, white, 'Expletus Sans', 2px 2px 2px black, 700, center, 3rem, underline);
+        @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem, underline);
         
     }
    
     .servicios__parrafo {
+        color:rgb(185, 131, 5);
         line-height: 3rem;
         font-weight: bold;
-        font-size:medium;
+        font-size:large;
         margin-top: 2rem;
         background-color:rgba(222, 184, 135, 0.351);
+        text-shadow: 2px 2px 4px #000000;
+
         
     }
     .servicios__ganaderia {
@@ -32,6 +35,8 @@
     .servicios__agricultura {
         @extend .servicios__ganaderia;
     }
+
+    
     
 }
 

@@ -8,9 +8,20 @@
     .btn {
         // background-color: $btn-link-color;
         color:white;
-        border: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.34);
         background-color: rgb(185, 131, 5);
     }
+
+    aside {
+        font-size: small;
+        margin-top: 7rem;
+        width: 40%;
+        padding: 2rem;
+        margin-left: 1.5rem;
+        float: right;
+        font-style: italic;
+        background-color: rgba(211, 211, 211, 0.584);
+      }
 
     &__section {
         padding-top: 4rem;
@@ -21,9 +32,9 @@
             @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem, underline);
     
         }
-    
-        
-        .card {
+
+             
+        .card1 {
             background-color:rgba(222, 184, 135, 0.351);
     
             .card-header{
@@ -34,49 +45,50 @@
                 border: 1px double rgba(218, 156, 76, 0.351);
                 padding: 3rem;
                 }
-                .card-body1 {
 
-                padding: 4rem;
+                .card-body1 {
+                margin-bottom: 3rem;
+                padding: 2rem;
                 font-size: small;
                 justify-content: left;
               
 
                 }
-            
+            }
 
-                .card-body2 {
+        .card2 {
+            background-color:rgba(222, 184, 135, 0.351);
+          
+
+            .card-body2 {
                 font-size: small;
+                color: black;
                 justify-content: left;
                 background-color: rgba(222, 184, 135, 0.351);
                  
                 .card-title2 {
                     color: $principal;    
-                    font-size: 4em;
-                    text-shadow: 2px 2px black;
+                    font-size: xx-large;
+                    text-shadow: 1px 1px 1px black;
+                    justify-items: center;
                 }    
-                
-                
-                .card-body3 {
-                    font-size: small;
-                    justify-content: left;
-                    background-color: rgba(222, 184, 135, 0.351);
-
-                }
+                        
 
                 .champaqui {
                     background-color: rgba(222, 184, 135, 0.351);
                     
                 }
 
+            } 
+
                 #historia {
-                    font-size: small                    ;
+                    font-size: small;                    ;
                     background-color: rgba(222, 184, 135, 0.351);
                 }
             }
     
     }
 
-}
 }
 
 @media screen and (max-width: 480px) {
@@ -95,9 +107,22 @@
 
 @media screen and (max-width:780px) {
     
-    
+   .nosotros__section{
+
+   
+    aside {
+        
+        vertical-align: top;
+        float: none;
+        width:100%;
+        order: 1;
+        justify-content: center;
+       
+    }
+}
 
     .nosotros__title {
         font-size: 4em;
     }
+
 }

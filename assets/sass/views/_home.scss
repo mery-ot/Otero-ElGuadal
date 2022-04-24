@@ -39,7 +39,11 @@
            
             transition:all .5s ease-in-out;
         }
-
+        .list-group {
+            text-align: center  ;
+            align-items: center;
+            justify-content: center;
+        }
         .list-group {
             margin-top: 4rem ;
 
@@ -105,11 +109,7 @@
                 border-radius: 50%;
             }
 
-
           
-
-
-
 
 @media screen and (max-width: 480px) {
 
@@ -117,6 +117,19 @@
        
           font-size:0.8em;
         }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .inicio__list {
+        
+        width: 100%;
+        vertical-align: bottom;
+        order:3;
+        
+    }
 
                 }
 

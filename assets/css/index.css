@@ -145,6 +145,10 @@ footer {
     .inicio__body .inicio__foto img {
       transition: all .5s ease-in-out; }
     .inicio__body .inicio .list-group {
+      text-align: center;
+      align-items: center;
+      justify-content: center; }
+    .inicio__body .inicio .list-group {
       margin-top: 4rem; }
       .inicio__body .inicio .list-group .heading {
         background-color: #b98305;
@@ -185,7 +189,14 @@ footer {
         border-radius: 50%; }
       @media screen and (max-width: 480px) {
         .inicio__body .inicio__imagenes p {
-          font-size: 0.8em; } }
+          font-size: 0.8em; }
+        .inicio__body .inicio__imagenes .main {
+          display: flex;
+          flex-direction: column; }
+        .inicio__body .inicio__imagenes .inicio__list {
+          width: 100%;
+          vertical-align: bottom;
+          order: 3; } }
 
 .nosotros {
   background-image: url(../img/trigo.jpg);
@@ -194,8 +205,17 @@ footer {
   flex-wrap: wrap; }
   .nosotros .btn {
     color: white;
-    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.34);
     background-color: #b98305; }
+  .nosotros aside {
+    font-size: small;
+    margin-top: 7rem;
+    width: 40%;
+    padding: 2rem;
+    margin-left: 1.5rem;
+    float: right;
+    font-style: italic;
+    background-color: rgba(211, 211, 211, 0.584); }
   .nosotros__section {
     padding-top: 4rem; }
     .nosotros__section .nosotros__title {
@@ -207,35 +227,36 @@ footer {
       text-align: center;
       padding: 3rem;
       text-decoration: underline; }
-    .nosotros__section .card {
+    .nosotros__section .card1 {
       background-color: rgba(222, 184, 135, 0.351); }
-      .nosotros__section .card .card-header {
+      .nosotros__section .card1 .card-header {
         font-size: 2em;
         font-weight: 600;
         background-color: rgba(222, 184, 135, 0.351);
         border: 1px double rgba(218, 156, 76, 0.351);
         padding: 3rem; }
-      .nosotros__section .card .card-body1 {
-        padding: 4rem;
+      .nosotros__section .card1 .card-body1 {
+        margin-bottom: 3rem;
+        padding: 2rem;
         font-size: small;
         justify-content: left; }
-      .nosotros__section .card .card-body2 {
+    .nosotros__section .card2 {
+      background-color: rgba(222, 184, 135, 0.351); }
+      .nosotros__section .card2 .card-body2 {
         font-size: small;
+        color: black;
         justify-content: left;
         background-color: rgba(222, 184, 135, 0.351); }
-        .nosotros__section .card .card-body2 .card-title2 {
+        .nosotros__section .card2 .card-body2 .card-title2 {
           color: #3d1a1a;
-          font-size: 4em;
-          text-shadow: 2px 2px black; }
-        .nosotros__section .card .card-body2 .card-body3 {
-          font-size: small;
-          justify-content: left;
+          font-size: xx-large;
+          text-shadow: 1px 1px 1px black;
+          justify-items: center; }
+        .nosotros__section .card2 .card-body2 .champaqui {
           background-color: rgba(222, 184, 135, 0.351); }
-        .nosotros__section .card .card-body2 .champaqui {
-          background-color: rgba(222, 184, 135, 0.351); }
-        .nosotros__section .card .card-body2 #historia {
-          font-size: small;
-          background-color: rgba(222, 184, 135, 0.351); }
+      .nosotros__section .card2 #historia {
+        font-size: small;
+        background-color: rgba(222, 184, 135, 0.351); }
 
 @media screen and (max-width: 480px) {
   .nosotros__section .nosotros__title {
@@ -244,6 +265,12 @@ footer {
     font-size: smaller; } }
 
 @media screen and (max-width: 780px) {
+  .nosotros__section aside {
+    vertical-align: top;
+    float: none;
+    width: 100%;
+    order: 1;
+    justify-content: center; }
   .nosotros__title {
     font-size: 4em; } }
 
@@ -257,17 +284,19 @@ footer {
     font-size: 4em;
     color: white;
     font-family: "Expletus Sans";
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 4px #000000;
     font-weight: 700;
     text-align: center;
     padding: 3rem;
     text-decoration: underline; }
   .servicios__main .servicios__parrafo {
+    color: #b98305;
     line-height: 3rem;
     font-weight: bold;
-    font-size: medium;
+    font-size: large;
     margin-top: 2rem;
-    background-color: rgba(222, 184, 135, 0.351); }
+    background-color: rgba(222, 184, 135, 0.351);
+    text-shadow: 2px 2px 4px #000000; }
   .servicios__main .servicios__ganaderia, .servicios__main .servicios__agricultura {
     font-size: 1.5em;
     color: black;
