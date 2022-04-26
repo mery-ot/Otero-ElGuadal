@@ -4,11 +4,11 @@
     padding-bottom:5rem;
     background-color: $secondary;
     color: black;
-    // font-family:  'Expletus Sans', cursive;
+    
     
     .galeria__titulo {
               
-        @include title(5em, #622b2b99, 'Expletus Sans', 2px 2px 2px black, 700, center, 3rem, underline);
+        @include title(5em, #622b2b99, 'Expletus Sans', 2px 2px 2px black, 700, center, 3rem);
     }
 
     #galeria .col-lg-4 {

@@ -41,19 +41,25 @@
         }
         .list-group {
             text-align: center  ;
-            align-items: center;
             justify-content: center;
-        }
-        .list-group {
             margin-top: 4rem ;
-
-        
+               
             .heading {
                 background-color: rgb(185, 131, 5);
                 border: none;
                 text-shadow: 2px 2px 2px black ;
+                padding: 1rem;
 
              }
+
+            .list-group-item {
+                padding: 1rem;
+                justify-content: center;
+            }
+
+            h5 {
+                padding:1rem;
+            }
             }
 
         h2 {

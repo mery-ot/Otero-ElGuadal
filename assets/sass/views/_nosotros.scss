@@ -10,17 +10,21 @@
         color:white;
         border-bottom: 2px solid rgba(0, 0, 0, 0.34);
         background-color: rgb(185, 131, 5);
+
+      }
+    .btn:hover {
+        background-color: rgb(205, 164, 69);
     }
 
     aside {
         font-size: small;
-        margin-top: 7rem;
+        margin-top:7rem;
         width: 40%;
         padding: 2rem;
         margin-left: 1.5rem;
         float: right;
         font-style: italic;
-        background-color: rgba(211, 211, 211, 0.584);
+        background-color: rgba(246, 205, 109, 0.525);
       }
 
     &__section {
@@ -29,7 +33,7 @@
 
         .nosotros__title {
 
-            @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem, underline);
+            @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem);
     
         }
 
@@ -64,8 +68,7 @@
             .card-body2 {
                 font-size: small;
                 color: black;
-                justify-content: left;
-                background-color: rgba(222, 184, 135, 0.351);
+                justify-content: left;                
                 margin-left: 2rem;
                  
                 .card-title2 {
@@ -78,8 +81,7 @@
 
                 .champaqui {
                     margin-top: 2rem;
-                    background-color: rgba(222, 184, 135, 0.351);
-                    
+                                        
                 }
 
             } 
@@ -110,16 +112,13 @@
 
 @media screen and (max-width:780px) {
     
-   .nosotros__section{
-
-   
-    aside {
-        
-        vertical-align: top;
-        float: none;
-        width:100%;
-        order: 1;
-        justify-content: center;
+   .nosotros__section aside {
+            vertical-align: top;
+            /* float: none; */
+            width: 100%;
+            order: 1;
+            justify-content: center;
+       
        
     }
 }
@@ -128,4 +127,3 @@
         font-size: 4em;
     }
 
-}
