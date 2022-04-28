@@ -286,8 +286,17 @@ footer {
   background-image: url(../img/trigo.jpg);
   line-height: 3rem; }
   .servicios__main H2 {
-    color: #FFFFFF;
-    text-shadow: 2px 2px 2px black; }
+    padding-top: 3rem;
+    color: #b98305;
+    text-shadow: 2px 2px 2px black;
+    text-align: center; }
+  .servicios__main .servicios__card {
+    justify-content: space-evenly; }
+  .servicios__main article {
+    background-color: #b98305;
+    margin: 0.5rem;
+    justify-content: center;
+    border-radius: 1.25rem !important; }
   .servicios__main .servicios__titulo {
     font-size: 4em;
     color: white;
@@ -296,19 +305,19 @@ footer {
     font-weight: 700;
     text-align: center;
     padding: 3rem;
-    text-decoration: underline; }
+    text-decoration: none; }
+  .servicios__main .servicios__intro {
+    background-color: rgba(176, 132, 32, 0.489); }
   .servicios__main .servicios__parrafo {
-    color: #b98305;
+    color: #FFFFFF;
     line-height: 3rem;
-    font-weight: bold;
+    font-weight: 5rem;
     font-size: large;
     margin-top: 2rem;
-    background-color: rgba(222, 184, 135, 0.351);
     text-shadow: 2px 2px 4px #000000; }
   .servicios__main .servicios__ganaderia, .servicios__main .servicios__agricultura {
     font-size: 1.5em;
-    color: black;
-    background-color: rgba(222, 184, 135, 0.351); }
+    color: black; }
 
 footer {
   color: #FFFFFF; }
@@ -336,17 +345,20 @@ footer {
   background-color: #FFFFFF;
   color: black; }
   .galeria__body .galeria__titulo {
-    font-size: 5em;
-    color: #622b2b99;
+    font-size: 6em;
+    color: #833c3c99;
     font-family: "Expletus Sans";
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px #141414;
     font-weight: 700;
     text-align: center;
     padding: 3rem;
     text-decoration: none; }
   .galeria__body #galeria .col-lg-4 {
     margin: 0 !important;
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(10px 10px 10px #141414); }
   .galeria__body #galeria img {
     width: 100%;
     height: 260px;
@@ -355,6 +367,11 @@ footer {
       -webkit-transform: scale(1.3);
       transform: scale(1.3);
       transition: all .5s ease-in-out; }
+
+.carousel {
+  filter: brightness(120%);
+  filter: contrast(120%);
+  filter: drop-shadow(10px 10px 10px #141414); }
 
 @media screen and (max-width: 780px) {
   #galeria .galeria__titulo {
