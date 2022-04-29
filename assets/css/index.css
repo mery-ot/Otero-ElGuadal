@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Josefin+Sans:wght@300;400;500;700&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Expletus+Sans:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Josefin+Sans:wght@300;400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap");
 .fs-xxlarge {
   font-size: 5em; }
 
@@ -32,7 +32,7 @@
 html {
   font-size: 62.5%;
   color: #FFFFFF;
-  font-family: "Inter", sans-serif; }
+  font-family: "M PLUS Rounded 1c", sans-serif; }
 
 ul {
   list-style-type: none; }
@@ -117,7 +117,7 @@ footer {
   min-height: 100vh;
   gap: 3rem;
   color: #FFFFFF;
-  font-family: "Inter", sans-serif; }
+  font-family: "M PLUS Rounded 1c", sans-serif; }
   .inicio__body .inicio {
     display: flex;
     font-size: small;
@@ -159,6 +159,8 @@ footer {
         justify-content: center; }
       .inicio__body .inicio .list-group h5 {
         padding: 1rem; }
+      .inicio__body .inicio .list-group a.gepsa {
+        padding: 2rem; }
     .inicio__body .inicio h2 {
       font-size: x-large;
       background-color: rgba(185, 131, 5, 0.777);
@@ -204,6 +206,7 @@ footer {
           order: 3; } }
 
 .nosotros {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   background-image: url(../img/trigo.jpg);
   line-height: 3rem;
   flex-direction: row;
@@ -218,11 +221,14 @@ footer {
     font-size: small;
     margin-top: 7rem;
     width: 40%;
-    padding: 2rem;
+    padding: 4rem;
     margin-left: 1.5rem;
     float: right;
     font-style: italic;
-    background-color: rgba(246, 205, 109, 0.525); }
+    background-color: rgba(245, 216, 148, 0.525);
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(10px 10px 10px #141414); }
   .nosotros__section {
     padding-top: 4rem; }
     .nosotros__section .nosotros__title {
@@ -247,29 +253,32 @@ footer {
         padding: 2rem;
         font-size: small;
         justify-content: left; }
-    .nosotros__section .card2 {
-      background-color: rgba(222, 184, 135, 0.351);
-      padding: 2rem; }
-      .nosotros__section .card2 .card-body2 {
-        font-size: small;
-        color: black;
-        justify-content: left;
-        margin-left: 2rem; }
-        .nosotros__section .card2 .card-body2 .card-title2 {
-          color: #b98305;
-          font-size: 3em;
-          text-shadow: 2px 2px 2px black; }
-        .nosotros__section .card2 .card-body2 .champaqui {
-          margin-top: 2rem; }
-      .nosotros__section .card2 #historia {
-        font-size: small;
-        background-color: rgba(222, 184, 135, 0.351); }
+  .nosotros .card2 {
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(10px 10px 10px #141414); }
+    .nosotros .card2 .card-body2 {
+      background-color: white;
+      font-size: small;
+      color: black;
+      justify-content: left;
+      padding-left: 1rem; }
+      .nosotros .card2 .card-body2 .card-title2 {
+        color: #b98305;
+        font-size: 3em;
+        text-shadow: 2px 2px 2px black; }
+      .nosotros .card2 .card-body2 .champaqui {
+        margin-top: 2rem; }
+  .nosotros #historia {
+    font-size: small; }
 
 @media screen and (max-width: 480px) {
   .nosotros__section .nosotros__title {
     font-size: 3em; }
   .nosotros__section .card-text {
-    font-size: smaller; } }
+    font-size: smaller; }
+  .nosotros__section h3 {
+    font-size: 1.5em; } }
 
 @media screen and (max-width: 780px) {
   .nosotros__section aside {
@@ -285,18 +294,6 @@ footer {
 .servicios__main {
   background-image: url(../img/trigo.jpg);
   line-height: 3rem; }
-  .servicios__main H2 {
-    padding-top: 3rem;
-    color: #b98305;
-    text-shadow: 2px 2px 2px black;
-    text-align: center; }
-  .servicios__main .servicios__card {
-    justify-content: space-evenly; }
-  .servicios__main article {
-    background-color: #b98305;
-    margin: 0.5rem;
-    justify-content: center;
-    border-radius: 1.25rem !important; }
   .servicios__main .servicios__titulo {
     font-size: 4em;
     color: white;
@@ -306,18 +303,29 @@ footer {
     text-align: center;
     padding: 3rem;
     text-decoration: none; }
-  .servicios__main .servicios__intro {
-    background-color: rgba(176, 132, 32, 0.489); }
   .servicios__main .servicios__parrafo {
-    color: #FFFFFF;
+    color: black;
     line-height: 3rem;
-    font-weight: 5rem;
+    font-weight: 700;
     font-size: large;
     margin-top: 2rem;
-    text-shadow: 2px 2px 4px #000000; }
-  .servicios__main .servicios__ganaderia, .servicios__main .servicios__agricultura {
-    font-size: 1.5em;
+    text-shadow: 2px 2px 4px #3b3a3a; }
+  .servicios__main .servicios__intro {
     color: black; }
+  .servicios__main .servicios__card {
+    justify-content: space-evenly;
+    align-content: center; }
+    .servicios__main .servicios__card article {
+      margin: 0.5rem;
+      justify-content: center;
+      border-radius: 1.25rem !important; }
+      .servicios__main .servicios__card article H2 {
+        padding-top: 3rem;
+        color: #b98305;
+        text-shadow: 2px 2px 2px black; }
+      .servicios__main .servicios__card article .servicios__ganaderia, .servicios__main .servicios__card article .servicios__agricultura {
+        font-size: 1.5em;
+        color: black; }
 
 footer {
   color: #FFFFFF; }
@@ -337,7 +345,7 @@ footer {
       font-weight: bold;
       justify-content: center;
       font-size: small; }
-    .servicios__main .servicios__card .servicios__ganaderia, .servicios__main .servicios__card .servicios__agricultura {
+    .servicios__main .servicios__card .servicios__ganaderia, .servicios__main .servicios__card article .servicios__agricultura {
       font-size: x-small; } }
 
 .galeria__body {
@@ -392,26 +400,35 @@ footer {
     margin-bottom: 4rem;
     padding: 4rem;
     font-size: small; }
+    .premios__body .premios__tabla .premios__p {
+      font-size: 1.3em; }
+    .premios__body .premios__tabla tr {
+      text-align: center; }
   .premios__body .premios__section {
     color: black;
     padding: 4rem; }
-  .premios__body .premios__foto img {
-    transition: all .5s ease-in-out; }
-    .premios__body .premios__foto img:hover {
-      filter: saturate(180%);
-      transition: all .5s ease-in-out; }
+    .premios__body .premios__section .premios__foto img {
+      transition: all .5s ease-in-out;
+      filter: brightness(120%);
+      filter: contrast(120%);
+      filter: drop-shadow(10px 10px 10px #141414); }
+      .premios__body .premios__section .premios__foto img:hover {
+        filter: saturate(180%);
+        transition: all .5s ease-in-out; }
 
 @media screen and (max-width: 480px) {
   .premios__body .premios__titulo {
     font-size: 3em; }
   .premios__body .premios__tabla {
-    font-size: x-small; } }
+    font-size: x-small; }
+    .premios__body .premios__tabla .premios__p {
+      font-size: 1em; } }
 
 .contacto__body {
   background-image: url(../img/rollos.jpg);
-  font-family: "Inter", sans-serif; }
+  font-family: "M PLUS Rounded 1c", sans-serif; }
   .contacto__body .contacto__title {
-    font-size: x-large;
+    font-size: xx-large;
     margin-bottom: 4rem;
     color: black;
     text-shadow: 2px 2px 4px #3e3c3c; }
@@ -445,10 +462,9 @@ footer {
   .contacto__body .iframe {
     position: relative;
     padding-bottom: 56.25%;
-    height: 0;
+    width: 100%;
     overflow: hidden;
-    margin-bottom: 5rem;
-    padding-left: 3rem; }
+    margin-bottom: 5rem; }
     .contacto__body .iframe .ubicacion {
       font-size: 1.5em;
       font-weight: 700;

@@ -2,63 +2,64 @@
 
     background-image: url(../img/trigo.jpg);
     line-height: 3rem;
-    
-    H2{
-        padding-top: 3rem;
-        color:rgb(185, 131, 5);;
-        text-shadow: 2px 2px 2px black;
-        text-align: center;
-    }
-    .servicios__card {
-        justify-content: space-evenly;
-    }
 
-    article {
-        background-color: rgb(185, 131, 5); 
-        margin: 0.5rem;
-        // padding: 2rem;
-        justify-content: center;
-        border-radius: 1.25rem!important;
-    }
-
-    
     .servicios__titulo {
         @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem);
-        
-    }
-   
-    .servicios__intro {
-         background-color: rgba(176, 132, 32, 0.489);
-         
+
     }
 
     .servicios__parrafo {
-       
-        color:$secondary;
+
+        color: black;
         line-height: 3rem;
-        font-weight: 5rem;
-        font-size:large;
+        font-weight: 700;
+        font-size: large;
         margin-top: 2rem;
-        // background-color:rgba(222, 184, 135, 0.351);
-        text-shadow: 2px 2px 4px #000000;
-        
+        text-shadow: 2px 2px 4px #3b3a3a;
 
-        
-    }
-    .servicios__ganaderia {
-        font-size: 1.5em;
-        color:black;
-        // background-color:rgba(222, 184, 135, 0.351);
-        
-    
-    }
-    .servicios__agricultura {
-        @extend .servicios__ganaderia;
     }
 
-    
-    
+    .servicios__intro {
+        color: black;
+
+    }
+
+
+    .servicios__card {
+        justify-content: space-evenly;
+        align-content: center;
+
+
+        article {
+
+            margin: 0.5rem;
+            // padding: 2rem;
+            justify-content: center;
+            border-radius: 1.25rem !important;
+
+            H2 {
+                padding-top: 3rem;
+                color: rgb(185, 131, 5);
+                ;
+                text-shadow: 2px 2px 2px black;
+
+            }
+
+            .servicios__ganaderia {
+                font-size: 1.5em;
+                color: black;
+
+            }
+
+            .servicios__agricultura {
+                @extend .servicios__ganaderia;
+            }
+        }
+    }
+
+
 }
+
 
 footer {
     color: $secondary;
@@ -67,16 +68,17 @@ footer {
 @media screen and (max-width: 480px) {
 
     .servicios__main {
-       
-    font-size: 1em;
-    line-height: 2em;
-    justify-content: center;
+
+        font-size: 1em;
+        line-height: 2em;
+        justify-content: center;
 
         .servicios__titulo {
             font-size: 3em;
-    }
+        }
+
         .servicios__parrafo {
-    
+
             border: 3px solid $secondary;
             border-radius: 15%;
             border-color: rgba(222, 184, 135, 0.351);
@@ -84,13 +86,14 @@ footer {
             font-weight: bold;
             justify-content: center;
             font-size: small;
-    }
+        }
+
         .servicios__card {
             .servicios__ganaderia {
-            font-size: x-small;
+                font-size: x-small;
+            }
         }
-    }
-    
+
     }
 
 }

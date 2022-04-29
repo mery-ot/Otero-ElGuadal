@@ -5,7 +5,7 @@
     font-family: $font-primary;
 
     .contacto__title {
-        font-size: x-large;
+        font-size: xx-large;
         margin-bottom: 4rem;
         color: black;
         text-shadow: 2px 2px 4px #3e3c3c;
@@ -57,10 +57,10 @@
     .iframe {
         position:relative;
         padding-bottom: 56.25%;
-        height: 0;
+        width:100%;
         overflow: hidden;
         margin-bottom: 5rem;
-        padding-left: 3rem;
+        
        
 
         .ubicacion {

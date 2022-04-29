@@ -1,31 +1,36 @@
 .nosotros {
-
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     background-image: url(../img/trigo.jpg);
     line-height: 3rem;
     flex-direction: row;
     flex-wrap: wrap;
- 
+
     .btn {
         // background-color: $btn-link-color;
-        color:white;
+        color: white;
         border-bottom: 2px solid rgba(0, 0, 0, 0.34);
         background-color: rgb(185, 131, 5);
 
-      }
+    }
+
     .btn:hover {
         background-color: rgb(205, 164, 69);
     }
 
     aside {
         font-size: small;
-        margin-top:7rem;
+        margin-top: 7rem;
         width: 40%;
-        padding: 2rem;
+        padding: 4rem;
         margin-left: 1.5rem;
         float: right;
         font-style: italic;
-        background-color: rgba(246, 205, 109, 0.525);
-      }
+        background-color: rgba(245, 216, 148, 0.525);
+        filter: brightness(120%);
+        filter: contrast(120%);
+        filter: drop-shadow(10px 10px 10px rgb(20, 20, 20));
+
+    }
 
     &__section {
         padding-top: 4rem;
@@ -34,96 +39,107 @@
         .nosotros__title {
 
             @include title(4em, white, 'Expletus Sans', 2px 2px 4px #000000, 700, center, 3rem);
-    
+
         }
 
-             
+
         .card1 {
-            background-color:rgba(222, 184, 135, 0.351);
-    
-            .card-header{
-       
+            background-color: rgba(222, 184, 135, 0.351);
+
+            .card-header {
+
                 font-size: 2em;
                 font-weight: 600;
-                background-color:rgba(222, 184, 135, 0.351);
+                background-color: rgba(222, 184, 135, 0.351);
                 border: 1px double rgba(218, 156, 76, 0.351);
                 padding: 3rem;
-                }
+            }
 
-                .card-body1 {
+            .card-body1 {
                 margin-bottom: 3rem;
                 padding: 2rem;
                 font-size: small;
                 justify-content: left;
-              
 
-                }
+
             }
-
-        .card2 {
-            background-color:rgba(222, 184, 135, 0.351);
-            padding: 2rem;
-          
-
-            .card-body2 {
-                font-size: small;
-                color: black;
-                justify-content: left;                
-                margin-left: 2rem;
-                 
-                .card-title2 {
-                    color: rgb(185, 131, 5);    
-                    font-size: 3em;
-                    text-shadow: 2px 2px 2px black;
-                   
-                }    
-                        
-
-                .champaqui {
-                    margin-top: 2rem;
-                                        
-                }
-
-            } 
-
-                #historia {
-                    font-size: small;                    ;
-                    background-color: rgba(222, 184, 135, 0.351);
-                }
-            }
-    
+        }
     }
 
+    .card2 {
+
+        filter: brightness(120%);
+        filter: contrast(120%);
+        filter: drop-shadow(10px 10px 10px rgb(20, 20, 20));
+
+
+        .card-body2 {
+            background-color: white;
+            font-size: small;
+            color: black;
+            justify-content: left;
+            padding-left: 1rem;
+
+
+            .card-title2 {
+                color: rgb(185, 131, 5);
+                font-size: 3em;
+                text-shadow: 2px 2px 2px black;
+
+            }
+
+
+            .champaqui {
+                margin-top: 2rem;
+
+            }
+
+
+        }
+
+    }
+
+    #historia {
+        font-size: small;
+        ;
+
+    }
 }
+
+
 
 @media screen and (max-width: 480px) {
 
     .nosotros__section {
         .nosotros__title {
-            font-size: 3em ;
+            font-size: 3em;
         }
+
         .card-text {
             font-size: smaller;
         }
 
-      }
-  
+        h3 {
+            font-size: 1.5em;
+        }
+
+    }
+
 }
 
 @media screen and (max-width:780px) {
-    
-   .nosotros__section aside {
-            vertical-align: top;
-            /* float: none; */
-            width: 100%;
-            order: 1;
-            justify-content: center;
-       
-       
+
+    .nosotros__section aside {
+        vertical-align: top;
+        /* float: none; */
+        width: 100%;
+        order: 1;
+        justify-content: center;
+
+
     }
 }
 
-    .nosotros__title {
-        font-size: 4em;
-    }
-
+.nosotros__title {
+    font-size: 4em;
+}

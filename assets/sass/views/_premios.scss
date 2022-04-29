@@ -10,26 +10,43 @@
         margin-bottom: 4rem;
         padding: 4rem;
         font-size: small;
+
+        .premios__p {
+            font-size: 1.3em;
+        }
+
+        tr {
+            text-align: center;
+        }
+
     }
 
     .premios__section {
         color: black;
         padding: 4rem;
-    }
 
-   
-    .premios__foto img {
+        .premios__foto img {
 
-        transition:all .5s ease-in-out;
-
-        &:hover{
-            filter: saturate(180%);
             transition:all .5s ease-in-out;
+    
+            &:hover{
+                filter: saturate(180%);
+                transition:all .5s ease-in-out;
+            }
+    
+            filter: brightness(120%);
+            filter: contrast(120%);
+            filter: drop-shadow(10px 10px 10px rgb(20, 20, 20));
+            
+    
         }
+       
     }
-   
-}
+    
+    }
 
+   
+  
 @media screen and (max-width: 480px) {
 
 .premios__body{
@@ -37,9 +54,13 @@
             font-size: 3em;
         }
 
-        
+               
         .premios__tabla {
           font-size: x-small;
+
+          .premios__p {
+            font-size: 1em;
+        }
         }
         
     }
