@@ -37,8 +37,10 @@ header {
                 }
 
                 .dropdown-menu {
-                    background-color: white;
+                    background-color: rgba(246, 229, 189, 0.815);;
                     color: $secondary;
+                    border-radius: 5%;
+                    font-size: 1.2em;
 
                     &.dropdown-item:hover {
 

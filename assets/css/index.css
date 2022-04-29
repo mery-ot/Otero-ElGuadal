@@ -83,8 +83,10 @@ header {
             border-bottom: 2px solid #FFFFFF;
             border-color: #FFFFFF; }
         header .navbar .navbar-collapse .nav-item .dropdown-menu {
-          background-color: white;
-          color: #FFFFFF; }
+          background-color: rgba(246, 229, 189, 0.815);
+          color: #FFFFFF;
+          border-radius: 5%;
+          font-size: 1.2em; }
           header .navbar .navbar-collapse .nav-item .dropdown-menu.dropdown-item:hover {
             background-color: #da9393;
             color: black; }
@@ -195,15 +197,8 @@ footer {
         transform: scale(1.2);
         border-radius: 50%; }
       @media screen and (max-width: 480px) {
-        .inicio__body .inicio__imagenes p {
-          font-size: 0.8em; }
-        .inicio__body .inicio__imagenes .main {
-          display: flex;
-          flex-direction: column; }
-        .inicio__body .inicio__imagenes .inicio__list {
-          width: 100%;
-          vertical-align: bottom;
-          order: 3; } }
+        .inicio__body .inicio__imagenes main .inicio__parrafo {
+          font-size: 1em; } }
 
 .nosotros {
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -302,7 +297,8 @@ footer {
     font-weight: 700;
     text-align: center;
     padding: 3rem;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: #3d1a1aa8; }
   .servicios__main .servicios__parrafo {
     color: black;
     line-height: 3rem;
@@ -353,27 +349,28 @@ footer {
   background-color: #FFFFFF;
   color: black; }
   .galeria__body .galeria__titulo {
-    font-size: 6em;
-    color: #833c3c99;
+    font-size: 4em;
+    color: #f2f2f2;
     font-family: "Expletus Sans";
-    text-shadow: 2px 2px 2px #141414;
+    text-shadow: 2px 2px 2px #2a2a2a;
     font-weight: 700;
     text-align: center;
     padding: 3rem;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: #3d1a1aef; }
   .galeria__body #galeria .col-lg-4 {
     margin: 0 !important;
     padding: 2.5rem;
     filter: brightness(120%);
     filter: contrast(120%);
-    filter: drop-shadow(10px 10px 10px #141414); }
+    filter: drop-shadow(10px 10px 10px #050505); }
   .galeria__body #galeria img {
     width: 100%;
     height: 260px;
     transition: all .5s ease-in-out; }
     .galeria__body #galeria img:hover {
-      -webkit-transform: scale(1.3);
-      transform: scale(1.3);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
       transition: all .5s ease-in-out; }
 
 .carousel {

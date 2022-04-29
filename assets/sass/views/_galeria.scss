@@ -8,7 +8,9 @@
     
     .galeria__titulo {
               
-        @include title(6em, #833c3c99, 'Expletus Sans', 2px 2px 2px rgb(20, 20, 20), 700, center, 3rem);
+        @include title(4em, #f2f2f2, 'Expletus Sans', 2px 2px 2px rgb(42, 42, 42), 700, center, 3rem);
+        background-color: #3d1a1aef;
+        
     }
 
     #galeria .col-lg-4 {
@@ -16,7 +18,7 @@
         padding: 2.5rem;
         filter: brightness(120%);
         filter: contrast(120%);
-        filter: drop-shadow(10px 10px 10px rgb(20, 20, 20));
+        filter: drop-shadow(10px 10px 10px rgb(5, 5, 5));
         
 
     }
@@ -26,7 +28,7 @@
         transition:all .5s ease-in-out;
 
         &:hover {
-            -webkit-transform:scale(1.3);transform:scale(1.3);
+            -webkit-transform:scale(1.2);transform:scale(1.2);
             transition:all .5s ease-in-out;
         }
     }}
