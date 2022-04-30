@@ -8,7 +8,7 @@
     
     .galeria__titulo {
               
-        @include title(4em, #f2f2f2, 'Expletus Sans', 2px 2px 2px rgb(42, 42, 42), 700, center, 3rem);
+        @include title(4em, #f2f2f2, 'Expletus Sans', 2px 2px 4px rgb(0, 0, 0), 700, center, 3rem);
         background-color: #3d1a1aef;
         
     }
