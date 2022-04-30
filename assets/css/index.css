@@ -108,7 +108,8 @@ footer {
   font-size: small;
   border-top: 1px solid white;
   background-color: black;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
 
 @media screen and (max-width: 480px) {
   footer {
@@ -185,7 +186,6 @@ footer {
       padding: 2rem;
       justify-content: center; }
       .inicio__body .inicio__imagenes .foto1 {
-        margin-right: 2rem;
         animation: zoomIn 1 ease-in-out 3s; }
       .inicio__body .inicio__imagenes .foto2 {
         padding: 1rem;
@@ -466,7 +466,6 @@ footer {
       font-size: 1.5em;
       font-weight: 700;
       color: black;
-      background-color: rgba(222, 184, 135, 0.351);
       margin-top: 2rem; }
     .contacto__body .iframe iframe {
       position: absolute;
