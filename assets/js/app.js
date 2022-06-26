@@ -16,7 +16,7 @@ const buscador = document.getElementById('search')
 
 let stockProductos = [
     {id: 1, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/2.JPG"},
-    {id: 2, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.JPG" },
+    {id: 2, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
     {id: 3, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg"},
     {id: 4, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
     {id: 5, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
