@@ -1,4 +1,4 @@
-
+let carritoDeCompras = []
 
 const contenedorProductos = document.getElementById('contenedor-productos')
 
@@ -59,10 +59,6 @@ let stockProductos = [
 
 
 
-
-let carritoDeCompras = []
-
-
 //filtro
 selecProd.addEventListener('change',()=>{
     console.log(selecProd.value);
@@ -77,7 +73,7 @@ selecProd.addEventListener('change',()=>{
 
 // //Buscado
 
-mostrarProductos(stockProductos)
+mostrarProductos()
 
 // //logica Ecommerce
 function mostrarProductos(){
@@ -97,40 +93,124 @@ function mostrarProductos(){
                         <p class="card-text">$${el.precio}</p>
                          <a id="boton${el.id}" class="btn btn-primary">Comprar</a>
                          </div> 
-                        </div> `;
-    const botonVerDetalle = document.createElement("button");
-    botonVerDetalle.innerText = "Ver Detalle";
-    botonVerDetalle.addEventListener("click", () => {
-        mostrarDetalle(producto);
-        crearBotonVolver();
-    })
+                        </div> `
 
-    div.appendChild(botonVerDetalle)
-    contenedorProductos.appendChild(div)
-    // mostrarProductos()
 
-    })
+contenedorProductos.appendChild(div)
 
+let btnAgregar = document.getElementById(`boton${el.id}`)
+//  console.log(btnAgregar);
+
+ btnAgregar.addEventListener('click',()=>{
+    agregarAlCarrito(el.id);
+ })
+
+})
+}
+    // const botonVerDetalle = document.createElement("button");
+    // botonVerDetalle.innerText = "Ver Detalle";
+    // botonVerDetalle.addEventListener("click", () => {
+    //     mostrarDetalle(producto);
+    //     crearBotonVolver();
+
+    // })   
+
+
+    // div.appendChild(botonVerDetalle)
+    // contenedorProductos.appendChild(div)
+    // // mostrarProductos()
+    // })
+
+
+//RECONOCE CADA PRODUCTO Y LO MUESTRA
+
+function agregarAlCarrito(id) {
+
+    let productoAgregar = stockProductos.find(obj=>obj.id === id)
+
+    console.log(productoAgregar);
+    carritoDeCompras.push(productoAgregar);
+    mostrarCarrito(productoAgregar);
+    actualizarCarrito()
 }
 
-function crearBotonVolver(){
-  const botonVolver = document.createElement("button");
-  botonVolver.classList.add("boton-volver");
-  botonVolver.innerText = "Atras";
-  botonVolver.addEventListener("click", () => {
-    mostrarProductos(productos);
-  }
-  )
-  document.getElementById("contenedor-de-peliculas").prepend(botonVolver);
-}
+//DONDE AGREGAR EL PRODUCTO
 
-mostrarProductos(productos);
+ function mostrarCarrito(productoAgregar) {
+
+    let div = document.createElement('div')
+     div.setAttribute('class', 'productoEnCarrito')
+     div.innerHTML=`<p>${productoAgregar.nombre}</p>
+                     <p>Precio: $${productoAgregar.precio}</p>
+                    <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>`
+     contenedorCarrito.appendChild(div)
     
-//     let btnAgregar = document.getElementById(`boton${el.id}`)
-//     console.log(btnAgregar);
-// //     btnAgregar.addEventListener('click',()=>{
-//         console.log(el.id);
-//     //     agregarAlCarrito(el.id);
+
+    let btnEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
+    btnEliminar.addEventListener('click',()=>{
+        btnEliminar.parentElement.remove()
+        carritoDeCompras = carritoDeCompras.filter(elemento => elemento.id !== productoAgregar.id)
+        console.log(carritoDeCompras);
+        actualizarCarrito()
+    
+})
+ }
+
+function actualizarCarrito (){
+    contadorCarrito.innerText = carritoDeCompras.length
+    precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0 )   //acumulador     
+ }
+
+                                                   
 
 
+
+// function crearBotonVolver(){
+//   const botonVolver = document.createElement("button");
+//   botonVolver.classList.add("boton-volver");
+//   botonVolver.innerText = "Atras";
+//   botonVolver.addEventListener("click", () => {
+//     // mostrarProductos(productos);
+//   }
+//   )
+//   document.getElementById("contenedor-de-peliculas").prepend(botonVolver);
+// }
+
+
+
+ 
+
+
+
+
+
+
+
+
+//  botonComprar.onclick = () => {
+//     const productoComprado = productos.find(producto => producto.id === botonComprar.id);
+//     carrito.push({ nombre: productoComprado.nombre, precio: productoComprado.precio })
+//   }
+//   //Agregamos los elementos creados a su elemento contenedor que es divProducto
+//  producto.append(imgProducto, nombreProducto, precioProducto, botonComprar);
+//   //Le agregamos al contenedor de la tienda cada uno de los divProducto
+//   contenedorTienda.append(producto);
+
+//   const mostrarCarrito = () => {
+
+//     for (const producto of carrito) {
+//       const nombreProducto = `<h4>Producto : ${producto.nombre}</h4>`
+//       const precioProducto = `<h4>Precio : ${producto.precio}</h4>`
+//       contenedorCarrito.innerHTML += nombreProducto
+//       contenedorCarrito.innerHTML += precioProducto
+//     }
+  
+//     const total = carrito.reduce((accumulador, producto) => accumulador + producto.precio, 0);
+//     contenedorCarrito.append(`Total Compra :  ${total}`)
+  
+//   }
+  
+//   let botonCarrito = document.getElementById("btnCarrito")
+//   botonCarrito.onclick = mostrarCarrito;
+  
 

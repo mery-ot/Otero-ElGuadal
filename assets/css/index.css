@@ -497,6 +497,11 @@ footer {
   .contacto__form label {
     font-size: 0.8em; } }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 img {
   width: 100%;
   margin-bottom: 10px; }
@@ -508,7 +513,8 @@ h1 {
   color: #e14c41;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 50px; }
+  font-size: 50px;
+  text-align: center; }
 
 .seleccion {
   text-align: center; }

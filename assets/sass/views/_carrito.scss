@@ -1,8 +1,8 @@
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 // @font-face {
 //     font-family: river;
 //     src: url(fonts/river.ttf);
@@ -35,7 +35,10 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 50px;
+  text-align: center;
+  
 }
+
 .seleccion {
   text-align: center;
 }
