@@ -30,35 +30,6 @@ let stockProductos = [
 ]
 
 
-//OTRA OPCIÖN
-
-// class Productos {
-//     constructor(nombre, descripcion, precio,img) {
-//         this.nombre = nombre;
-//         this.descripcion = descripcion;
-//         this.precio = precio;
-//         this.img = img;
-        
-//     }
-// }
-
-// const productos = []    
-
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-// productos.push(producto1)
-
-
-
 //filtro
 selecProd.addEventListener('change',()=>{
     console.log(selecProd.value);
@@ -71,11 +42,11 @@ selecProd.addEventListener('change',()=>{
     }
 })
 
-// //Buscado
+//Buscado
 
 mostrarProductos()
 
-// //logica Ecommerce
+//logica Ecommerce
 function mostrarProductos(){
 
     contenedorProductos.innerHTML = ""
@@ -107,19 +78,6 @@ let btnAgregar = document.getElementById(`boton${el.id}`)
 
 })
 }
-    // const botonVerDetalle = document.createElement("button");
-    // botonVerDetalle.innerText = "Ver Detalle";
-    // botonVerDetalle.addEventListener("click", () => {
-    //     mostrarDetalle(producto);
-    //     crearBotonVolver();
-
-    // })   
-
-
-    // div.appendChild(botonVerDetalle)
-    // contenedorProductos.appendChild(div)
-    // // mostrarProductos()
-    // })
 
 
 //RECONOCE CADA PRODUCTO Y LO MUESTRA
@@ -161,56 +119,18 @@ function actualizarCarrito (){
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0 )   //acumulador     
  }
 
-                                                   
-
-
-
-// function crearBotonVolver(){
-//   const botonVolver = document.createElement("button");
-//   botonVolver.classList.add("boton-volver");
-//   botonVolver.innerText = "Atras";
-//   botonVolver.addEventListener("click", () => {
-//     // mostrarProductos(productos);
-//   }
-//   )
-//   document.getElementById("contenedor-de-peliculas").prepend(botonVolver);
-// }
-
-
-
  
+ //JSON y Local Storage
 
+console.log(stockProductos);
 
+let itemsJSON = JSON.stringify(stockProductos)
 
+localStorage.setItem('productos', itemsJSON)
 
+let itemsFromStorage = localStorage.getItem('productos')
+console.log(typeof itemsFromStorage);
+console.log(itemsFromStorage);
 
-
-
-
-//  botonComprar.onclick = () => {
-//     const productoComprado = productos.find(producto => producto.id === botonComprar.id);
-//     carrito.push({ nombre: productoComprado.nombre, precio: productoComprado.precio })
-//   }
-//   //Agregamos los elementos creados a su elemento contenedor que es divProducto
-//  producto.append(imgProducto, nombreProducto, precioProducto, botonComprar);
-//   //Le agregamos al contenedor de la tienda cada uno de los divProducto
-//   contenedorTienda.append(producto);
-
-//   const mostrarCarrito = () => {
-
-//     for (const producto of carrito) {
-//       const nombreProducto = `<h4>Producto : ${producto.nombre}</h4>`
-//       const precioProducto = `<h4>Precio : ${producto.precio}</h4>`
-//       contenedorCarrito.innerHTML += nombreProducto
-//       contenedorCarrito.innerHTML += precioProducto
-//     }
-  
-//     const total = carrito.reduce((accumulador, producto) => accumulador + producto.precio, 0);
-//     contenedorCarrito.append(`Total Compra :  ${total}`)
-  
-//   }
-  
-//   let botonCarrito = document.getElementById("btnCarrito")
-//   botonCarrito.onclick = mostrarCarrito;
-  
-
+let productosBack = JSON.parse( itemsFromStorage )
+console.log(productosBack);
