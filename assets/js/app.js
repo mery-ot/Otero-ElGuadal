@@ -13,33 +13,38 @@ const precioTotal = document.getElementById('precioTotal');
 const selecTalles = document.getElementById('selecTalles')
 const buscador = document.getElementById('search')
 
+const selecProd = document.getElementById("selecProd")
+
 
 let stockProductos = [
-    {id: 1, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/2.JPG"},
-    {id: 2, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 3, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg"},
-    {id: 4, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 5, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 6, nombre: "Toro", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 7, nombre: "Vaca", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 8, nombre: "Vaca", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 9, nombre: "Vaca", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 10, nombre: "Ternero", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 11, nombre: "Ternero", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 12, nombre: "Ternero", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
+    {id: 1, nombre: "Toro1", descripcion:"Campeón", precio: 350000, img: "../img/2.JPG"},
+    {id: 2, nombre: "Toro2", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
+    {id: 3, nombre: "Toro3", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg"},
+    {id: 4, nombre: "Toro4", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
+    {id: 5, nombre: "Toro5", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
+    {id: 6, nombre: "Toro6", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
+    {id: 7, nombre: "Vaca1", descripcion:"Campeón", precio: 200000, img: "../img/IMG_1643.jpg" },
+    {id: 8, nombre: "Vaca2", descripcion:"Campeón", precio: 200000, img: "../img/IMG_1643.jpg" },
+    {id: 9, nombre: "Vaca3", descripcion:"Campeón", precio: 200000, img: "../img/IMG_1643.jpg" },
+    {id: 10, nombre: "Ternero1", descripcion:"Campeón", precio: 180000, img: "../img/IMG_1643.jpg" },
+    {id: 11, nombre: "Ternero2", descripcion:"Campeón", precio: 180000, img: "../img/IMG_1643.jpg" },
+    {id: 12, nombre: "Ternero3", descripcion:"Campeón", precio: 180000, img: "../img/IMG_1643.jpg" },
 ]
 
 
 //filtro
+
 selecProd.addEventListener('change',()=>{
     console.log(selecProd.value);
     if(selecProd.value == 'all'){
         mostrarProductos(stockProductos)
+       
     }else{
-        let arrayNuevo = stockProductos.filter(elemento => elemento.precio === selecProd.value)
+        let arrayNuevo = stockProductos.filter(elemento => elemento.nombre === selecProd.value)
         console.log(arrayNuevo);
         mostrarProductos(arrayNuevo)    
     }
+    
 })
 
 //Buscado
@@ -74,8 +79,10 @@ let btnAgregar = document.getElementById(`boton${el.id}`)
 
  btnAgregar.addEventListener('click',()=>{
     agregarAlCarrito(el.id);
+    
  })
-
+ 
+ 
 })
 }
 
@@ -90,7 +97,18 @@ function agregarAlCarrito(id) {
     carritoDeCompras.push(productoAgregar);
     mostrarCarrito(productoAgregar);
     actualizarCarrito()
+    
+
+    localStorage.setItem('productos', JSON.stringify(carritoDeCompras))
+    let productosFromStorage = localStorage.getItem('productos')
+    console.log(typeof productosFromStorage);
+    console.log(productosFromStorage);
+
+    let carritoBack = JSON.parse( productosFromStorage )
+    console.log(carritoBack);
 }
+
+
 
 //DONDE AGREGAR EL PRODUCTO
 
@@ -111,8 +129,11 @@ function agregarAlCarrito(id) {
         console.log(carritoDeCompras);
         actualizarCarrito()
     
+
+        
 })
  }
+
 
 function actualizarCarrito (){
     contadorCarrito.innerText = carritoDeCompras.length
@@ -120,7 +141,7 @@ function actualizarCarrito (){
  }
 
  
- //JSON y Local Storage
+//  JSON y Local Storage
 
 console.log(stockProductos);
 
@@ -134,3 +155,37 @@ console.log(itemsFromStorage);
 
 let productosBack = JSON.parse( itemsFromStorage )
 console.log(productosBack);
+
+
+//variables formulario
+
+
+// const nombres = []
+// const telefono = []
+
+// const inputNombre = document.querySelector("#inputNombre")
+// const inputTelefono = document.querySelector("#inputTel")
+
+// const btnCargar = document.querySelector("#btnCargar")
+// const btnCancelar = document.querySelector("#btnCancelar")
+// const btnVer = document.querySelector("#btnVer")
+
+
+btnCargar.addEventListener("click", ()=> {
+   nombres.push(inputNombre.value)
+    console.log("Se agregó un nombre nuevo")
+    btnCancelar.click()
+})
+
+
+btnCancelar.addEventListener("click", ()=> {
+   console.log("Boton cancelar clickeado")
+   inputNombre.value=""
+   inputTelefono.value=""
+})
+
+btnVer.addEventListener("click", () => {
+   console.log("Boton ver listado clickeado")
+})
+
+

@@ -179,3 +179,53 @@ select {
   margin: auto;
   width: 43%;
 }
+
+#btnFinalizar {
+  border: black;
+  color:white;
+  font-size: 25px;
+  background-color: rgb(225, 76, 65);
+  border-radius: 70%;
+  padding: 15px 25px;
+  transition: all 0.3s;
+  margin-bottom: 4rem;
+}
+
+#btnFinalizar:hover {
+  cursor: pointer;
+  color: rgb(225, 76, 65);
+  background-color: white;
+}
+#btnFinalizar:focus {
+  outline: none;
+}
+
+#btnCargar, #btnCancelar, #btnVer {
+
+  display: flex;
+  flex-direction: column;
+  border: black;
+  color:white;
+  font-size: 15px;
+  background-color: rgb(225, 76, 65);
+  border-radius: 5% ;
+  margin-top: 4rem;
+  margin-left: 3rem;
+  padding: 10px 40px;
+  transition: all 0.3s;
+  margin-bottom: 4rem;
+  
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 70px;
+  margin-top: 4rem;
+}
+
+.FinCompra {
+font-size: 20px;
+font-weight: bold;
+margin-top: 8rem;
+}
