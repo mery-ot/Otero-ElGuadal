@@ -29,7 +29,7 @@ let stockProductos = [
     {id: 8, nombre: "Toro8", descripcion:"Campeón", precio: 200000, tipo: "-300000", img: "../img/6.JPG" },
     {id: 9, nombre: "Toro9", descripcion:"Campeón", precio: 200000, tipo: "-300000", img: "../img/9.JPG" },
     {id: 10, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/10.JPG" },
-    {id: 11, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/terneros.JPG" },
+    {id: 11, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/Carusel1.jpg" },
     {id: 12, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/galeria1.jpg" }
 ]
 
