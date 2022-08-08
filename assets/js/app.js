@@ -10,25 +10,27 @@ const finCompra = document.getElementById('fin-compra')
 const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 
-const selecTalles = document.getElementById('selecTalles')
+
 const buscador = document.getElementById('search')
 
 const selecProd = document.getElementById("selecProd")
 
+const btn = document.getElementById('btnFinalizar')
+
 
 let stockProductos = [
-    {id: 1, nombre: "Toro1", descripcion:"Campeón", precio: 350000, img: "../img/2.JPG"},
-    {id: 2, nombre: "Toro2", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 3, nombre: "Toro3", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg"},
-    {id: 4, nombre: "Toro4", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 5, nombre: "Toro5", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 6, nombre: "Toro6", descripcion:"Campeón", precio: 350000, img: "../img/IMG_1643.jpg" },
-    {id: 7, nombre: "Vaca1", descripcion:"Campeón", precio: 200000, img: "../img/IMG_1643.jpg" },
-    {id: 8, nombre: "Vaca2", descripcion:"Campeón", precio: 200000, img: "../img/IMG_1643.jpg" },
-    {id: 9, nombre: "Vaca3", descripcion:"Campeón", precio: 200000, img: "../img/IMG_1643.jpg" },
-    {id: 10, nombre: "Ternero1", descripcion:"Campeón", precio: 180000, img: "../img/IMG_1643.jpg" },
-    {id: 11, nombre: "Ternero2", descripcion:"Campeón", precio: 180000, img: "../img/IMG_1643.jpg" },
-    {id: 12, nombre: "Ternero3", descripcion:"Campeón", precio: 180000, img: "../img/IMG_1643.jpg" },
+    {id: 1, nombre: "Toro1", descripcion:"Campeón", precio: 350000, tipo: "+300000", img: "../img/2.JPG"},
+    {id: 2, nombre: "Toro2", descripcion:"Campeón", precio: 350000, tipo: "+300000", img: "../img/IMG_1643.jpg" },
+    {id: 3, nombre: "Toro3", descripcion:"Campeón", precio: 350000, tipo: "+300000", img: "../img/3.JPG"},
+    {id: 4, nombre: "Toro4", descripcion:"Campeón", precio: 350000, tipo: "+300000", img: "../img/4.JPG" },
+    {id: 5, nombre: "Toro5", descripcion:"Campeón", precio: 350000, tipo: "+300000", img: "../img/5.JPG" },
+    {id: 6, nombre: "Toro6", descripcion:"Campeón", precio: 350000, tipo: "+300000", img: "../img/8.JPG" },
+    {id: 7, nombre: "Toro7", descripcion:"Campeón", precio: 200000, tipo: "-300000", img: "../img/7.JPG" },
+    {id: 8, nombre: "Toro8", descripcion:"Campeón", precio: 200000, tipo: "-300000", img: "../img/6.JPG" },
+    {id: 9, nombre: "Toro9", descripcion:"Campeón", precio: 200000, tipo: "-300000", img: "../img/9.JPG" },
+    {id: 10, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/10.JPG" },
+    {id: 11, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/terneros.JPG" },
+    {id: 12, nombre: "Ternero", descripcion:"Campeón", precio: 180000, tipo: "ternero", img: "../img/terneros2.JPG" },
 ]
 
 
@@ -40,7 +42,7 @@ selecProd.addEventListener('change',()=>{
         mostrarProductos(stockProductos)
        
     }else{
-        let arrayNuevo = stockProductos.filter(elemento => elemento.nombre === selecProd.value)
+        let arrayNuevo = stockProductos.filter(elemento => elemento.tipo === selecProd.value)
         console.log(arrayNuevo);
         mostrarProductos(arrayNuevo)    
     }
@@ -49,14 +51,14 @@ selecProd.addEventListener('change',()=>{
 
 //Buscado
 
-mostrarProductos()
+mostrarProductos(stockProductos)
 
 //logica Ecommerce
-function mostrarProductos(){
+function mostrarProductos(array){
 
     contenedorProductos.innerHTML = ""
 
-    stockProductos.forEach(el => {
+    array.forEach(el => {
     let div = document.createElement('div')
     div.className = 'producto'
     // div.setAttribute('class', 'producto')
@@ -79,10 +81,9 @@ let btnAgregar = document.getElementById(`boton${el.id}`)
 
  btnAgregar.addEventListener('click',()=>{
     agregarAlCarrito(el.id);
-    
+        
  })
- 
- 
+  
 })
 }
 
@@ -93,14 +94,14 @@ function agregarAlCarrito(id) {
 
     let productoAgregar = stockProductos.find(obj=>obj.id === id)
 
-    console.log(productoAgregar);
-    carritoDeCompras.push(productoAgregar);
-    mostrarCarrito(productoAgregar);
+    console.log(productoAgregar)
+    carritoDeCompras.push(productoAgregar)
+    mostrarCarrito(productoAgregar)
     actualizarCarrito()
     
 
-    localStorage.setItem('productos', JSON.stringify(carritoDeCompras))
-    let productosFromStorage = localStorage.getItem('productos')
+    localStorage.setItem('carrito', JSON.stringify(carritoDeCompras))
+    let productosFromStorage = localStorage.getItem('carrito')
     console.log(typeof productosFromStorage);
     console.log(productosFromStorage);
 
@@ -129,9 +130,9 @@ function agregarAlCarrito(id) {
         console.log(carritoDeCompras);
         actualizarCarrito()
     
-
         
 })
+
  }
 
 
@@ -139,6 +140,28 @@ function actualizarCarrito (){
     contadorCarrito.innerText = carritoDeCompras.length
     precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0 )   //acumulador     
  }
+
+
+btn.addEventListener('click', () => {
+
+  
+    if (carritoDeCompras.length >=1) {
+
+        Swal.fire({
+            title: 'Genial!',
+            text: 'Haz clickeado el botón!',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
+    } else {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El carrito se encuentra vacio.'
+    })
+}
+})
+
 
  
 //  JSON y Local Storage
@@ -157,6 +180,9 @@ let productosBack = JSON.parse( itemsFromStorage )
 console.log(productosBack);
 
 
+
+
+
 //variables formulario
 
 
@@ -171,21 +197,22 @@ console.log(productosBack);
 // const btnVer = document.querySelector("#btnVer")
 
 
-btnCargar.addEventListener("click", ()=> {
-   nombres.push(inputNombre.value)
-    console.log("Se agregó un nombre nuevo")
-    btnCancelar.click()
-})
+// btnCargar.addEventListener("click", ()=> {
+//    nombres.push(inputNombre.value)
+//     console.log("Se agregó un nombre nuevo")
+//     btnCancelar.click()
+//     inputNombre.focus()
+// })
 
 
-btnCancelar.addEventListener("click", ()=> {
-   console.log("Boton cancelar clickeado")
-   inputNombre.value=""
-   inputTelefono.value=""
-})
+// btnCancelar.addEventListener("click", ()=> {
+//    console.log("Boton cancelar clickeado")
+//    inputNombre.value=""
+//    inputTelefono.value=""
+// })
 
-btnVer.addEventListener("click", () => {
-   console.log("Boton ver listado clickeado")
-})
+// btnVer.addEventListener("click", () => {
+//    console.log("Boton ver listado clickeado")
+// })
 
 

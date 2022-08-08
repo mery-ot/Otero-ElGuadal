@@ -662,7 +662,7 @@ select {
 #btnFinalizar:focus {
   outline: none; }
 
-#btnCargar, #btnCancelar, #btnVer {
+#btnCargar, #btnCancelar, #btnVer{
   display: flex;
   flex-direction: column;
   border: black;
@@ -674,15 +674,43 @@ select {
   margin-left: 3rem;
   padding: 10px 40px;
   transition: all 0.3s;
-  margin-bottom: 4rem; }
+  margin: 4rem 10rem; 
+}
+
+
+#btnVolver  {
+  display: flex;
+  flex-direction: column;
+  border: black;
+  color: white;
+  font-size: 15px;
+  background-color: #432bfc;
+  border-radius: 5%;
+  margin-top: 4rem;
+  margin-left: 3rem;
+  padding: 10px 40px;
+  transition: all 0.3s;
+  margin: 4rem 10rem; 
+
+}
+
 
 input {
   display: flex;
   flex-direction: column;
-  padding: 5px 70px;
-  margin-top: 4rem; }
+  padding: 5px 100px;
+  margin: 4rem 4rem;
+  background-color: white;
+  color: black;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+
+}
 
 .FinCompra {
-  font-size: 20px;
+  font-size: 3rem;
   font-weight: bold;
-  margin-top: 8rem; }
+  margin: 8rem 4rem; 
+
+}
